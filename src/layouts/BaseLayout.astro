@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Overrides the self-referencing canonical (front matter `canonical`). */
+  canonical?: string;
+}
+
+const { title, description = SITE_DESCRIPTION, canonical } = Astro.props;
+
+// Every page gets a canonical tag. It points at the page's own URL unless the
+// content explicitly declares one (cross-posted / syndicated articles).
+const selfUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site);
+const canonicalURL = canonical ?? selfUrl.href;
+
+const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={SITE_TITLE}
+      href={new URL('rss.xml', Astro.site).href}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-header">
+        <a class="brand" href="/">{SITE_TITLE}</a>
+        <nav>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <p>&copy; {new Date().getFullYear()} {SITE_TITLE}</p>
+      </footer>
+    </div>
+  </body>
+</html>
