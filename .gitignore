@@ -16,3 +16,5 @@ pnpm-debug.log*
 .DS_Store
 # jetbrains setting folder
 .idea/
+# Claude desktop app preview config (local only)
+.claude/launch.json
