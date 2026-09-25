@@ -3,7 +3,9 @@ title: 'Software that knows: why now'
 description: 'Formalising business knowledge used to be slow and expensive. LLMs make the first draft cheap. Review and accountability stay with people.'
 pubDate: 2026-09-25
 tags: ['software-that-knows', 'business-applications', 'knowledge-management', 'llm']
-draft: true
+draft: false
+series: 'Software that knows'
+image: '/images/software-that-knows/effort-before-and-now.png'
 ---
 
 *Part 2 of the series "Software that knows".*
@@ -35,6 +37,8 @@ LLMs and agents lower the cost of the first draft.
 - For example, a first draft of a small ontology can be extracted from an
   internal SOP in one working session, without a dedicated ontologist.
 - Even with review, the total effort is a fraction of what it used to be.
+
+![Two bars on a time axis. Before LLMs: one long bar, specialists interview experts and model by hand. With LLMs: a much shorter bar, split into a thin LLM draft segment covering about 80% of the content in about 20% of the time, and a wider human review segment covering the last 20% in about 80% of the time. Illustrative, not to scale.](/images/software-that-knows/effort-before-and-now.png)
 
 ## What didn't change
 

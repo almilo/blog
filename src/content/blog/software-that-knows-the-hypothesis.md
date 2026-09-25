@@ -1,9 +1,11 @@
 ---
 title: 'Software that knows: the hypothesis'
 description: 'Business applications keep business knowledge implicit in code. A hypothesis: make it explicit and put it at the centre of the software.'
-pubDate: 2026-09-25
+pubDate: 2026-09-24
 tags: ['software-that-knows', 'business-applications', 'knowledge-management']
-draft: true
+draft: false
+series: 'Software that knows'
+image: '/images/software-that-knows/code-vs-knowledge-centric.png'
 ---
 
 *Part 1 of the series "Software that knows".*
@@ -54,6 +56,8 @@ changed is the subject of the
 [next article](https://almilo.com/blog/software-that-knows-why-now/).
 
 ## The hypothesis
+
+![Two diagrams side by side. Code-centric, current practice: a UI of tables and forms on top of code with business rules scattered through it, on top of a database. Knowledge-centric, the hypothesis: formal, explicit knowledge at the centre, with UI, code, agents and experts connected to it.](/images/software-that-knows/code-vs-knowledge-centric.png)
 
 If we capture an organisation's knowledge, make it formal and explicit, and
 put it at the centre of the software, with code and UI derived from it or

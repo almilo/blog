@@ -7,14 +7,17 @@ interface Props {
   description?: string;
   /** Overrides the self-referencing canonical (front matter `canonical`). */
   canonical?: string;
+  /** Social preview image, as a path under public/ (front matter `image`). */
+  image?: string;
 }
 
-const { title, description = SITE_DESCRIPTION, canonical } = Astro.props;
+const { title, description = SITE_DESCRIPTION, canonical, image } = Astro.props;
 
 // Every page gets a canonical tag. It points at the page's own URL unless the
 // content explicitly declares one (cross-posted / syndicated articles).
 const selfUrl = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site);
 const canonicalURL = canonical ?? selfUrl.href;
+const imageURL = image && new URL(image, Astro.site).href;
 
 const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
 ---
@@ -38,7 +41,8 @@ const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta name="twitter:card" content="summary" />
+    {imageURL && <meta property="og:image" content={imageURL} />}
+    <meta name="twitter:card" content={imageURL ? 'summary_large_image' : 'summary'} />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>

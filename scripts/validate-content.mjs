@@ -7,6 +7,7 @@
  * file and reports it mid-build. This runs first and reports *every* problem
  * across *every* post at once, which is what you want from CI.
  */
+import { existsSync } from 'node:fs';
 import { readdir, readFile } from 'node:fs/promises';
 import { relative, resolve } from 'node:path';
 import { parse as parseYaml } from 'yaml';
@@ -14,6 +15,7 @@ import { parse as parseYaml } from 'yaml';
 import { blogSchema } from '../src/schemas/blog.mjs';
 
 const CONTENT_DIR = resolve(import.meta.dirname, '..', 'src', 'content', 'blog');
+const PUBLIC_DIR = resolve(import.meta.dirname, '..', 'public');
 const FRONT_MATTER = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 const SLUG_RULE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_PREFIX = /^\d{4}-\d{2}-\d{2}-/;
@@ -87,6 +89,10 @@ for (const file of files) {
       const path = issue.path.length > 0 ? issue.path.join('.') : 'front matter';
       problems.push(`${path}: ${issue.message}`);
     }
+  }
+
+  if (typeof data.image === 'string' && !existsSync(resolve(PUBLIC_DIR, `.${data.image}`))) {
+    problems.push(`image: ${data.image} does not exist under public/`);
   }
 
   if (body.trim().length === 0) {

@@ -8,6 +8,12 @@ export async function getPublishedPosts(): Promise<Post[]> {
   return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
+/** Published posts in a series, in reading order (oldest first). */
+export async function getSeriesPosts(series: string) {
+  const posts = await getPublishedPosts();
+  return posts.filter((post) => post.data.series === series).reverse();
+}
+
 export function formatDate(date: Date): string {
   return date.toLocaleDateString('en-GB', {
     year: 'numeric',

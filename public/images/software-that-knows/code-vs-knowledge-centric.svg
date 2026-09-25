@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="898" height="498" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Left: code-centric -->
+  <text x="215" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2328">Code-centric</text>
+  <text x="215" y="74" text-anchor="middle" font-size="18" fill="#5c6470">current practice</text>
+
+  <g fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2">
+    <rect x="55" y="98" width="320" height="58" rx="8"/>
+    <rect x="55" y="168" width="320" height="172" rx="8"/>
+    <rect x="55" y="352" width="320" height="58" rx="8"/>
+  </g>
+  <g font-size="19" fill="#1f2328" text-anchor="middle">
+    <text x="215" y="133">UI: tables + forms</text>
+    <text x="215" y="198">Code</text>
+    <text x="215" y="387">Database</text>
+  </g>
+  <g fill="#e6effc" stroke="#0b5cd5" stroke-width="2" stroke-dasharray="5 4">
+    <rect x="80" y="216" width="64" height="30" rx="15"/>
+    <rect x="222" y="210" width="64" height="30" rx="15"/>
+    <rect x="160" y="258" width="64" height="30" rx="15"/>
+    <rect x="290" y="254" width="64" height="30" rx="15"/>
+    <rect x="96" y="294" width="64" height="30" rx="15"/>
+    <rect x="236" y="298" width="64" height="30" rx="15"/>
+  </g>
+  <g font-size="16" fill="#0b5cd5" text-anchor="middle">
+    <text x="112" y="237">rule</text>
+    <text x="254" y="231">rule</text>
+    <text x="192" y="279">rule</text>
+    <text x="322" y="275">rule</text>
+    <text x="128" y="315">rule</text>
+    <text x="268" y="319">rule</text>
+  </g>
+
+  <text x="215" y="456" text-anchor="middle" font-size="18" fill="#5c6470">Knowledge implicit, scattered in code</text>
+
+  <!-- Arrow -->
+  <g stroke="#5c6470" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 390 254 L 446 254"/>
+    <path d="M 436 244 L 448 254 L 436 264"/>
+  </g>
+
+  <!-- Right: knowledge-centric -->
+  <text x="670" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2328">Knowledge-centric</text>
+  <text x="670" y="74" text-anchor="middle" font-size="18" fill="#5c6470">the hypothesis</text>
+
+  <g stroke="#0b5cd5" stroke-width="2.5">
+    <line x1="670" y1="254" x2="670" y2="142"/>
+    <line x1="670" y1="254" x2="780" y2="254"/>
+    <line x1="670" y1="254" x2="670" y2="366"/>
+    <line x1="670" y1="254" x2="560" y2="254"/>
+  </g>
+
+  <g fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2">
+    <rect x="620" y="100" width="100" height="44" rx="8"/>
+    <rect x="780" y="232" width="100" height="44" rx="8"/>
+    <rect x="620" y="364" width="100" height="44" rx="8"/>
+    <rect x="460" y="232" width="100" height="44" rx="8"/>
+  </g>
+  <g font-size="19" fill="#1f2328" text-anchor="middle">
+    <text x="670" y="129">UI</text>
+    <text x="830" y="261">Code</text>
+    <text x="670" y="393">Agents</text>
+    <text x="510" y="261">Experts</text>
+  </g>
+
+  <circle cx="670" cy="254" r="74" fill="#e6effc" stroke="#0b5cd5" stroke-width="3"/>
+  <g font-size="18" font-weight="700" fill="#0b5cd5" text-anchor="middle">
+    <text x="670" y="236">Formal,</text>
+    <text x="670" y="260">explicit</text>
+    <text x="670" y="284">knowledge</text>
+  </g>
+
+  <text x="670" y="456" text-anchor="middle" font-size="18" fill="#5c6470">Knowledge explicit, at the centre</text>
+</svg>

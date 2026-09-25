@@ -18,5 +18,10 @@ export const blogSchema = z
     tags: z.array(z.string()),
     draft: z.boolean().default(true),
     canonical: z.string().url('canonical must be an absolute URL').optional(),
+    series: z.string().optional(),
+    image: z
+      .string()
+      .startsWith('/', 'image must be a path under public/, e.g. /images/my-post/cover.png')
+      .optional(),
   })
   .strict();

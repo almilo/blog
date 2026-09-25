@@ -45,6 +45,8 @@ schema there and both follow.
 | `tags`        | array of string | yes      | may be empty (`[]`)                      |
 | `draft`       | boolean         | no       | **defaults to `true`**                   |
 | `canonical`   | URL string      | no       | absolute URL; overrides the self-canonical |
+| `series`      | string          | no       | series name; posts sharing it are listed together |
+| `image`       | path string     | no       | path under `public/`, e.g. `/images/slug/x.png`; social preview |
 
 Unknown keys are rejected — a typo'd field is an error, not a silent no-op.
 
@@ -86,6 +88,8 @@ src/
     blog/[slug].astro  a post
     rss.xml.ts         /rss.xml
   styles/global.css    all styling
+public/
+  images/<series-or-slug>/  diagrams (PNG, plus the SVG source)
 scripts/
   validate-content.mjs the `pnpm validate` front matter check
 .github/workflows/
@@ -96,6 +100,18 @@ Always read posts through `getPublishedPosts()` in `src/lib/posts.ts` rather
 than calling `getCollection('blog')` directly — that is the one place drafts are
 filtered and sort order is defined. Calling `getCollection` directly is how a
 draft leaks into production.
+
+## Series and images
+
+Posts with the same `series` value get a box at the end listing every
+*published* part, oldest first (`getSeriesPosts()` in `src/lib/posts.ts`). Order
+comes from `pubDate`, so give each part a distinct date. Keep a short
+hand-written "Part N" line in the text too: Medium imports have no series box.
+
+Images live in `public/images/` and are referenced by absolute path, both in
+markdown and in the `image` field, so the same URL works on the site, in
+`og:image` and in Medium imports. `pnpm validate` fails if `image` points at a
+missing file. Use PNG (Medium does not accept SVG) and always write alt text.
 
 ## Canonical URLs
 

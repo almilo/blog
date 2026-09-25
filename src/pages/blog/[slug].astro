@@ -3,7 +3,7 @@ import { render } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPublishedPosts, formatDate } from '../../lib/posts';
+import { getPublishedPosts, getSeriesPosts, formatDate } from '../../lib/posts';
 
 export const getStaticPaths = (async () => {
   const posts = await getPublishedPosts();
@@ -15,12 +15,14 @@ export const getStaticPaths = (async () => {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const seriesPosts = post.data.series ? await getSeriesPosts(post.data.series) : [];
 ---
 
 <BaseLayout
   title={post.data.title}
   description={post.data.description}
   canonical={post.data.canonical}
+  image={post.data.image}
 >
   <article>
     <h1>{post.data.title}</h1>
@@ -49,5 +51,23 @@ const { Content } = await render(post);
     <div class="prose">
       <Content />
     </div>
+    {
+      seriesPosts.length > 0 && (
+        <nav class="series" aria-label={`Series: ${post.data.series}`}>
+          <p class="series-title">Series: {post.data.series}</p>
+          <ol>
+            {seriesPosts.map((entry) => (
+              <li>
+                {entry.id === post.id ? (
+                  <span aria-current="page">{entry.data.title}</span>
+                ) : (
+                  <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
   </article>
 </BaseLayout>
