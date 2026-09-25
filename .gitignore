@@ -18,3 +18,5 @@ pnpm-debug.log*
 .idea/
 # Claude desktop app preview config (local only)
 .claude/launch.json
+# Reference documents kept locally (e.g. source guidelines)
+/*.pdf
