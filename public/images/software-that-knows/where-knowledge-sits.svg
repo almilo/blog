@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="898" height="468" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Quadrants: columns implicit | explicit, rows formal / informal -->
+  <rect x="110" y="40" width="374" height="172" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <rect x="496" y="40" width="374" height="172" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <rect x="110" y="224" width="374" height="172" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <rect x="496" y="224" width="374" height="172" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+
+  <g font-size="17" font-style="italic" fill="#5c6470">
+    <text x="130" y="76">precise, but hidden</text>
+    <text x="516" y="76" fill="#0b5cd5">precise and readable</text>
+    <text x="130" y="260">informal and hidden</text>
+    <text x="516" y="260">readable, but ambiguous</text>
+  </g>
+
+  <!-- Formal, implicit -->
+  <g fill="#fffdf9" stroke="#b9b3a7" stroke-width="2">
+    <rect x="130" y="98" width="86" height="40" rx="20"/>
+    <rect x="228" y="98" width="176" height="40" rx="20"/>
+    <rect x="130" y="150" width="150" height="40" rx="20"/>
+    <rect x="292" y="150" width="160" height="40" rx="20"/>
+  </g>
+  <g font-size="18" fill="#1f2328" text-anchor="middle">
+    <text x="173" y="124">Code</text>
+    <text x="316" y="124">Database schema</text>
+    <text x="205" y="176">Configuration</text>
+    <text x="372" y="176">Reports, alerts</text>
+  </g>
+
+  <!-- Formal, explicit -->
+  <rect x="516" y="98" width="334" height="94" rx="10" fill="#0b5cd5"/>
+  <text x="683" y="138" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Knowledge model</text>
+  <text x="683" y="168" text-anchor="middle" font-size="17" fill="#ffffff">ontology · shapes · rules</text>
+
+  <!-- Informal, implicit -->
+  <rect x="130" y="286" width="170" height="40" rx="20" fill="#fffdf9" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="215" y="312" text-anchor="middle" font-size="18" fill="#1f2328">Clinician's head</text>
+
+  <!-- Informal, explicit -->
+  <rect x="516" y="286" width="80" height="40" rx="20" fill="#fffdf9" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="556" y="312" text-anchor="middle" font-size="18" fill="#1f2328">SOP</text>
+
+  <!-- Axis labels -->
+  <g font-size="19" font-weight="700" fill="#1f2328" text-anchor="middle">
+    <text transform="translate(70 126) rotate(-90)">Formal</text>
+    <text transform="translate(70 310) rotate(-90)">Informal</text>
+    <text x="297" y="438">Implicit</text>
+    <text x="683" y="438">Explicit</text>
+  </g>
+</svg>
