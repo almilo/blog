@@ -12,7 +12,7 @@
 
   <rect x="100" y="232" width="500" height="64" rx="8" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
   <text x="120" y="271" font-size="19" font-weight="700" fill="#0b5cd5">Knowledge</text>
-  <text x="280" y="271" font-size="17" fill="#1f2328">above ~38 °C is a fever</text>
+  <text x="280" y="271" font-size="17" fill="#1f2328">above ~38 °C is considered a fever</text>
 
   <rect x="130" y="136" width="500" height="64" rx="8" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
   <text x="150" y="175" font-size="19" font-weight="700" fill="#0b5cd5">Understanding</text>

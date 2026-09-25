@@ -76,7 +76,7 @@ agents can take the top step too and suggest a treatment. The decision, and
 the accountability for it, stays with people, as argued in
 [part 2](https://almilo.com/blog/software-that-knows-why-now/).
 
-![Five levels stacked like a staircase, each with the fever example. Data: 01000010 00011010. Information: 38.5 °C, patient X, 08:00. Knowledge: above about 38 °C is a fever. Understanding: fever is a response to infection. Wisdom: what to do depends on the patient. Arrows between the levels are labelled decode and add context, generalise, explain causes, and judge. Knowledge and Understanding are marked as made explicit in software that knows; Wisdom is marked as suggested by agents, decided by people.](/images/software-that-knows/what-knowing-means.png)
+![Five levels stacked like a staircase, each with the fever example. Data: 01000010 00011010. Information: 38.5 °C, patient X, 08:00. Knowledge: above about 38 °C is considered a fever. Understanding: fever is a response to infection. Wisdom: what to do depends on the patient. Arrows between the levels are labelled decode and add context, generalise, explain causes, and judge. Knowledge and Understanding are marked as made explicit in software that knows; Wisdom is marked as suggested by agents, decided by people.](/images/software-that-knows/what-knowing-means.png)
 
 ## So, knows what?
 
