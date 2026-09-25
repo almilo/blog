@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="898" height="578" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Levels, bottom (data) to top (wisdom), indented like a staircase -->
+  <rect x="40" y="424" width="500" height="64" rx="8" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="60" y="463" font-size="19" font-weight="700" fill="#1f2328">Data</text>
+  <text x="220" y="463" font-size="17" font-family="Menlo, SFMono-Regular, monospace" fill="#1f2328">01000010 00011010 …</text>
+
+  <rect x="70" y="328" width="500" height="64" rx="8" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="90" y="367" font-size="19" font-weight="700" fill="#1f2328">Information</text>
+  <text x="250" y="367" font-size="17" fill="#1f2328">38.5 °C, patient X, 08:00</text>
+
+  <rect x="100" y="232" width="500" height="64" rx="8" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="120" y="271" font-size="19" font-weight="700" fill="#0b5cd5">Knowledge</text>
+  <text x="280" y="271" font-size="17" fill="#1f2328">above ~38 °C is a fever</text>
+
+  <rect x="130" y="136" width="500" height="64" rx="8" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="150" y="175" font-size="19" font-weight="700" fill="#0b5cd5">Understanding</text>
+  <text x="310" y="175" font-size="17" fill="#1f2328">fever is a response to infection</text>
+
+  <rect x="160" y="40" width="500" height="64" rx="8" fill="#3d4450"/>
+  <text x="180" y="79" font-size="19" font-weight="700" fill="#ffffff">Wisdom</text>
+  <text x="340" y="79" font-size="17" fill="#ffffff">what to do depends on the patient</text>
+
+  <!-- Reasoning: the steps between levels -->
+  <text x="700" y="26" text-anchor="middle" font-size="15" fill="#5c6470">reasoning</text>
+  <g stroke="#5c6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 700 452 L 700 366"/><path d="M 692 376 L 700 364 L 708 376"/>
+    <path d="M 700 356 L 700 270"/><path d="M 692 280 L 700 268 L 708 280"/>
+    <path d="M 700 260 L 700 174"/><path d="M 692 184 L 700 172 L 708 184"/>
+    <path d="M 700 164 L 700 78"/><path d="M 692 88 L 700 76 L 708 88"/>
+  </g>
+  <g font-size="16" fill="#1f2328">
+    <text x="718" y="414">decode, add context</text>
+    <text x="718" y="318">generalise</text>
+    <text x="718" y="222">explain causes</text>
+    <text x="718" y="126">judge</text>
+  </g>
+
+  <!-- Legend -->
+  <rect x="40" y="522" width="16" height="16" rx="3" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="66" y="536" font-size="16" fill="#5c6470">Made explicit in software that knows</text>
+  <rect x="400" y="522" width="16" height="16" rx="3" fill="#3d4450"/>
+  <text x="426" y="536" font-size="16" fill="#5c6470">Suggested by agents, decided by people</text>
+</svg>
