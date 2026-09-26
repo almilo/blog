@@ -23,5 +23,7 @@ export const blogSchema = z
       .string()
       .startsWith('/', 'image must be a path under public/, e.g. /images/my-post/cover.png')
       .optional(),
+    linkedin: z.string().url('linkedin must be an absolute URL').optional(),
+    medium: z.string().url('medium must be an absolute URL').optional(),
   })
   .strict();

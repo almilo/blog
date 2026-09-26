@@ -44,6 +44,12 @@ const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
     {imageURL && <meta property="og:image" content={imageURL} />}
     <meta name="twitter:card" content={imageURL ? 'summary_large_image' : 'summary'} />
     <meta name="generator" content={Astro.generator} />
+    <!-- GoatCounter: cookieless page-view counts; it ignores localhost by default. -->
+    <script
+      is:inline
+      data-goatcounter="https://almilo.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <div class="wrap">

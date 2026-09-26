@@ -47,6 +47,8 @@ schema there and both follow.
 | `canonical`   | URL string      | no       | absolute URL; overrides the self-canonical |
 | `series`      | string          | no       | series name; posts sharing it are listed together |
 | `image`       | path string     | no       | path under `public/`, e.g. `/images/slug/x.png`; social preview |
+| `linkedin`    | URL string      | no       | the post's LinkedIn discussion; shown at the end |
+| `medium`      | URL string      | no       | the Medium copy of the post; shown at the end |
 
 Unknown keys are rejected — a typo'd field is an error, not a silent no-op.
 
@@ -116,6 +118,14 @@ missing file. Use PNG (Medium does not accept SVG) and always write alt text.
 The `trim-whitespace-around-headings` integration in `astro.config.mjs` strips
 the whitespace before and after headings in the built HTML. Without it, Medium
 imports gain an empty paragraph next to every heading.
+
+Set `linkedin` and `medium` once those posts exist; a "Discuss this article"
+line appears at the end of the post for whichever is set.
+
+## Analytics
+
+`BaseLayout` loads GoatCounter (<https://almilo.goatcounter.com>): cookieless
+page-view counts. It ignores localhost, so `pnpm dev` visits are not counted.
 
 ## Canonical URLs
 

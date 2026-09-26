@@ -52,6 +52,16 @@ const seriesPosts = post.data.series ? await getSeriesPosts(post.data.series) : 
       <Content />
     </div>
     {
+      (post.data.linkedin || post.data.medium) && (
+        <p class="discuss">
+          Discuss this article:{' '}
+          {post.data.linkedin && <a href={post.data.linkedin}>LinkedIn</a>}
+          {post.data.linkedin && post.data.medium && ' · '}
+          {post.data.medium && <a href={post.data.medium}>Medium</a>}
+        </p>
+      )
+    }
+    {
       seriesPosts.length > 0 && (
         <nav class="series" aria-label={`Series: ${post.data.series}`}>
           <p class="series-title">Series: {post.data.series}</p>

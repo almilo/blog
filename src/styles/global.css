@@ -163,6 +163,12 @@ time,
   border-radius: 8px;
 }
 
+.discuss {
+  margin: 2.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .series {
   margin-top: 3rem;
   padding: 1rem 1.25rem;
