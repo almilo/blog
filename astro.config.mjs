@@ -7,19 +7,19 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://almilo.com',
-  integrations: [sitemap(), trimWhitespaceBeforeHeadings()],
+  integrations: [sitemap(), trimWhitespaceAroundHeadings()],
 });
 
 /**
- * Removes the whitespace before every heading in the built HTML. Browsers
- * ignore it, but Medium's importer turns it into an empty paragraph above each
- * heading of an imported post.
+ * Removes the whitespace before and after every heading in the built HTML.
+ * Browsers ignore it, but Medium's importer turns it into an empty paragraph
+ * next to each heading of an imported post.
  *
  * @returns {import('astro').AstroIntegration}
  */
-function trimWhitespaceBeforeHeadings() {
+function trimWhitespaceAroundHeadings() {
   return {
-    name: 'trim-whitespace-before-headings',
+    name: 'trim-whitespace-around-headings',
     hooks: {
       'astro:build:done': async ({ dir }) => {
         const root = fileURLToPath(dir);
@@ -34,5 +34,8 @@ function trimWhitespaceBeforeHeadings() {
 /** @param {string} file */
 async function trimFile(file) {
   const html = await readFile(file, 'utf8');
-  await writeFile(file, html.replace(/>\s+(<h[1-6][\s>])/g, '>$1'));
+  const trimmed = html
+    .replace(/>\s+(<h[1-6][\s>])/g, '>$1')
+    .replace(/(<\/h[1-6]>)\s+</g, '$1<');
+  await writeFile(file, trimmed);
 }

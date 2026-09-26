@@ -113,9 +113,9 @@ markdown and in the `image` field, so the same URL works on the site, in
 `og:image` and in Medium imports. `pnpm validate` fails if `image` points at a
 missing file. Use PNG (Medium does not accept SVG) and always write alt text.
 
-The `trim-whitespace-before-headings` integration in `astro.config.mjs` strips
-the whitespace before headings in the built HTML. Without it, Medium imports
-gain an empty paragraph above every heading.
+The `trim-whitespace-around-headings` integration in `astro.config.mjs` strips
+the whitespace before and after headings in the built HTML. Without it, Medium
+imports gain an empty paragraph next to every heading.
 
 ## Canonical URLs
 
