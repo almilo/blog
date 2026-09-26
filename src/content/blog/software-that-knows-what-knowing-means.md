@@ -3,7 +3,7 @@ title: 'Software that knows: what knowing means'
 description: 'Data, information, knowledge, understanding and wisdom: what it means for software to know, from raw bits to judgement.'
 pubDate: 2026-09-26
 tags: ['software-that-knows', 'dikw', 'knowledge-management']
-draft: true
+draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/what-knowing-means.png'
 ---
