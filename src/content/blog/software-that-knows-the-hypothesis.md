@@ -6,6 +6,8 @@ tags: ['software-that-knows', 'business-applications', 'knowledge-management']
 draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/code-vs-knowledge-centric.png'
+linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7509195222828867584/'
+medium: 'https://medium.com/@almilo/software-that-knows-the-hypothesis-0dd1ae7d184f'
 ---
 
 *Part 1 of the series "Software that knows".*

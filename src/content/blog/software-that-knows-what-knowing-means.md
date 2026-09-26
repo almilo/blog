@@ -6,6 +6,8 @@ tags: ['software-that-knows', 'dikw', 'knowledge-management']
 draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/what-knowing-means.png'
+linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7509562131671920640/'
+medium: 'https://medium.com/@almilo/software-that-knows-what-knowing-means-a780772bd63a'
 ---
 
 *Part 3 of the series "Software that knows".*

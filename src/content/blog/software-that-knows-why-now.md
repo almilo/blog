@@ -6,6 +6,8 @@ tags: ['software-that-knows', 'business-applications', 'knowledge-management', '
 draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/effort-before-and-now.png'
+linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7509195222828867584/'
+medium: 'https://medium.com/@almilo/software-that-knows-why-now-95ab03d8aa4c'
 ---
 
 *Part 2 of the series "Software that knows".*
