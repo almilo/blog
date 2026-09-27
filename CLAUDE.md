@@ -92,6 +92,8 @@ src/
   styles/global.css    all styling
 public/
   images/<series-or-slug>/  diagrams (PNG, plus the SVG source)
+  favicon.svg, apple-touch-icon.png   site icon: an italic "a" outlined from
+                        Cormorant Garamond Bold Italic (SIL OFL)
 scripts/
   validate-content.mjs the `pnpm validate` front matter check
 .github/workflows/
