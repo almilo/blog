@@ -6,7 +6,7 @@ tags: ['software-that-knows', 'business-applications', 'knowledge-management']
 draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/code-vs-knowledge-centric.png'
-linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7509195222828867584/'
+linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_global-it-spending-will-reach-637-trillion-share-7509195219926671360-vMii/'
 medium: 'https://medium.com/@almilo/software-that-knows-the-hypothesis-0dd1ae7d184f'
 ---
 

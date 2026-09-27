@@ -6,7 +6,7 @@ tags: ['software-that-knows', 'dikw', 'knowledge-management']
 draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/what-knowing-means.png'
-linkedin: 'https://www.linkedin.com/feed/update/urn:li:activity:7509562131671920640/'
+linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7509562130375938048-FLZi/'
 medium: 'https://medium.com/@almilo/software-that-knows-what-knowing-means-a780772bd63a'
 ---
 
