@@ -3,7 +3,7 @@ title: 'Software that knows: where knowledge sits'
 description: 'One fever rule, found in code, a database, configuration, an SOP and a clinician''s head. And the alternative: one formal, explicit file.'
 pubDate: 2026-09-27
 tags: ['software-that-knows', 'ontology', 'knowledge-management']
-draft: true
+draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/where-knowledge-sits.png'
 ---
