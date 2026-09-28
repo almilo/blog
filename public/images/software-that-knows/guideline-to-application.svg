@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="398" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Phases -->
+  <g font-size="17" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="232" y="48">Stochastic (coding agent)</text>
+    <text x="570" y="48">Deterministic (code)</text>
+  </g>
+  <g stroke="#b9b3a7" stroke-width="2" fill="none">
+    <path d="M190 62 v8 h84 v-8"/>
+    <path d="M398 62 v8 h344 v-8"/>
+  </g>
+
+  <!-- Boxes -->
+  <rect x="30" y="100" width="160" height="130" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="110" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">Source</text>
+  <text x="110" y="178" text-anchor="middle" font-size="16" fill="#5c6470">WHO DAK</text>
+  <text x="110" y="200" text-anchor="middle" font-size="16" fill="#5c6470">spreadsheets</text>
+
+  <rect x="274" y="100" width="170" height="130" rx="10" fill="#0b5cd5"/>
+  <text x="359" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Knowledge</text>
+  <text x="359" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">model</text>
+  <text x="359" y="202" text-anchor="middle" font-size="16" fill="#ffffff">Turtle: the domain</text>
+
+  <rect x="528" y="100" width="170" height="130" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="613" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#0b5cd5">Application</text>
+  <text x="613" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#0b5cd5">model</text>
+  <text x="613" y="202" text-anchor="middle" font-size="16" fill="#0b5cd5">JSON: form, rules</text>
+
+  <rect x="742" y="100" width="128" height="130" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="806" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">Generic</text>
+  <text x="806" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">app</text>
+  <text x="806" y="202" text-anchor="middle" font-size="16" fill="#5c6470">no domain</text>
+
+  <!-- Arrows -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M192 165 H270" stroke-dasharray="7 6"/>
+    <path d="M446 165 H524"/>
+    <path d="M700 165 H738"/>
+  </g>
+  <g font-size="15" fill="#5c6470" text-anchor="middle">
+    <text x="231" y="152">extracts</text>
+    <text x="485" y="152">generator</text>
+  </g>
+
+  <!-- People -->
+  <rect x="274" y="290" width="170" height="44" rx="22" fill="#fffdf9" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="359" y="318" text-anchor="middle" font-size="17" fill="#1f2328">Experts accept</text>
+  <path d="M359 288 V236" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="613" y="318" text-anchor="middle" font-size="15" font-style="italic" fill="#5c6470">same input, same output</text>
+</svg>
