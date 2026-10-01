@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="468" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Phases -->
+  <g font-size="17" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="279" y="48">Stochastic (interpreter)</text>
+    <text x="646" y="48">Deterministic (code)</text>
+  </g>
+  <g stroke="#b9b3a7" stroke-width="2" fill="none">
+    <path d="M194 62 v8 h170 v-8"/>
+    <path d="M452 62 v8 h388 v-8"/>
+  </g>
+
+  <!-- Boxes -->
+  <rect x="30" y="100" width="130" height="130" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="95" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">Note</text>
+  <text x="95" y="178" text-anchor="middle" font-size="16" fill="#5c6470">free text</text>
+
+  <rect x="194" y="100" width="170" height="130" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="279" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">Interpreter</text>
+  <text x="279" y="178" text-anchor="middle" font-size="16" fill="#5c6470">words, Jev</text>
+  <text x="279" y="200" text-anchor="middle" font-size="16" fill="#5c6470">or an LLM</text>
+
+  <rect x="452" y="100" width="170" height="130" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="537" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#0b5cd5">Checks</text>
+  <text x="537" y="178" text-anchor="middle" font-size="16" fill="#0b5cd5">question, value,</text>
+  <text x="537" y="200" text-anchor="middle" font-size="16" fill="#0b5cd5">quote, structure</text>
+
+  <rect x="690" y="100" width="150" height="130" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="765" y="148" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">Form</text>
+  <text x="765" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">and rules</text>
+  <text x="765" y="202" text-anchor="middle" font-size="16" fill="#5c6470">classification</text>
+
+  <rect x="279" y="300" width="258" height="96" rx="10" fill="#0b5cd5"/>
+  <text x="408" y="340" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Knowledge model</text>
+  <text x="408" y="370" text-anchor="middle" font-size="16" fill="#ffffff">questions, values, words</text>
+
+  <!-- Arrows: the flow of a note -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M162 165 H190"/>
+    <path d="M366 165 H448" stroke-dasharray="7 6"/>
+    <path d="M600 232 V312 H676"/>
+    <path d="M765 288 V234"/>
+  </g>
+  <g font-size="15" fill="#5c6470" text-anchor="middle">
+    <text x="407" y="152">proposes</text>
+  </g>
+
+  <!-- Arrows: the knowledge model grounds the interpreter and the checks -->
+  <g stroke="#0b5cd5" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M330 298 V234"/>
+    <path d="M486 298 V234"/>
+  </g>
+  <g font-size="15" fill="#0b5cd5">
+    <text x="312" y="272" text-anchor="end">grounds</text>
+    <text x="504" y="272">generates</text>
+  </g>
+
+  <!-- People -->
+  <rect x="680" y="290" width="170" height="44" rx="22" fill="#fffdf9" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="765" y="318" text-anchor="middle" font-size="17" fill="#1f2328">Person confirms</text>
+  <text x="765" y="372" text-anchor="middle" font-size="16" font-style="italic" fill="#5c6470">accountability stays</text>
+  <text x="765" y="392" text-anchor="middle" font-size="16" font-style="italic" fill="#5c6470">with people</text>
+</svg>
