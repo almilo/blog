@@ -21,3 +21,5 @@ pnpm-debug.log*
 # Reference documents kept locally (e.g. source guidelines)
 /*.pdf
 /*.xlsx
+# Media made from posts: Medium exports and teaser videos (pnpm medium, pnpm teaser)
+.media/

@@ -13,6 +13,8 @@ Node 22 and pnpm. Always pnpm — never npm or yarn.
 | `pnpm build`    | Validate front matter, then build to `dist/`                 |
 | `pnpm validate` | Front matter / slug check only (no build)                    |
 | `pnpm preview`  | Serve the built `dist/` locally                              |
+| `pnpm medium <slug>` | Export a post for Medium to `.media/<slug>/medium/`     |
+| `pnpm teaser <slug>` | Render a post's teaser video from `teasers/<slug>.yaml` |
 
 ## Writing a post
 
@@ -96,6 +98,11 @@ public/
                         Cormorant Garamond Bold Italic (SIL OFL)
 scripts/
   validate-content.mjs the `pnpm validate` front matter check
+  medium-export.mjs    `pnpm medium`: Medium-ready HTML, table images, manifest
+  teaser.mjs           `pnpm teaser`: teaser video from a scene file (Chrome, ffmpeg)
+teasers/               one scene file per post that has a teaser
+.media/                exports and videos (not in Git)
+.claude/skills/        publish-to-medium, make-teaser
 .github/workflows/
   deploy.yml           build + deploy to GitHub Pages on push to main
 ```
@@ -153,3 +160,18 @@ links and the sitemap, so it must match wherever the site actually serves from.
 There is intentionally no `public/CNAME`. The custom domain is configured
 separately. If you add one later, note that GitHub Pages drops the domain on
 each deploy unless the `CNAME` file is committed to the repository.
+
+## Medium and LinkedIn
+
+After a post is live, two skills prepare its copies elsewhere; the author presses
+Publish in both places.
+
+- **publish-to-medium:** import the post into Medium, replace the body with the
+  output of `pnpm medium <slug>` (Medium's importer drops lists that start with
+  bold text, code blocks, tables and image descriptions), upload the images with
+  their alternative text, and set the preview description and topics.
+- **make-teaser:** write `teasers/<slug>.yaml`, render the video with
+  `pnpm teaser <slug>`, and draft the LinkedIn post.
+
+Then set `medium` and `linkedin` in the post's front matter.
+

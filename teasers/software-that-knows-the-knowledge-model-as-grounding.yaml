@@ -1,0 +1,71 @@
+# Teaser for part 6 (pnpm teaser software-that-knows-the-knowledge-model-as-grounding).
+# Each scene: an optional url (default: the post), steps to run first, the element to highlight,
+# where to scroll it (at: fraction of the screen height, or top), and the caption.
+seconds: 4.2
+scenes:
+  - highlight: { text: 'This part adds a second interface' }
+    at: top
+    captionAt: 0.80
+    caption: "Part 6: describe the child in a note,\ninstead of filling in a form."
+  - highlight: { text: 'A health worker describes the child in a note' }
+    at: 0.36
+    caption: "A health worker writes what they see,\nas for a colleague."
+  - highlight: { figure: note-proposals }
+    at: 0.45
+    captionAt: 0.06
+    caption: "An interpreter proposes form answers,\neach with a quote from the note."
+  - highlight: { figure: note-result }
+    at: 0.5
+    captionAt: 0.04
+    caption: "A person confirms.\nThe WHO rules classify, as in part 5."
+  - highlight: { text: 'Code copies what the DAK already has' }
+    at: 0.33
+    caption: "The knowledge model supplies the words:\ncopied from the WHO guidance, extended by an agent."
+  - highlight: { kind: ul, text: 'Fields and values:' }
+    at: 0.4
+    captionAt: 0.8
+    caption: "Every answer must name a real question,\nuse an allowed value and quote the note."
+  - highlight: { kind: table, text: 'Proposes' }
+    at: 0.5
+    captionAt: 0.08
+    caption: "Four interpreters: plain words, Jev,\nand two small frontier models."
+  - highlight: { kind: table, text: 'Danger signs wrong' }
+    at: 0.42
+    caption: "Words alone find 78% of the facts.\nThe small frontier models find 94–100%."
+  - highlight: { kind: li, text: 'Danger signs wrong:' }
+    at: 0.42
+    captionAt: 0.08
+    caption: "No interpreter got a danger sign wrong\non the 15 test notes."
+  - highlight: { figure: knowledge-model-as-grounding }
+    at: 0.5
+    captionAt: 0.74
+    caption: "The interpreter proposes. Code checks.\nA person confirms."
+  - url: https://lab.almilo.com/imci-fever/
+    width: 900
+    steps:
+      - { click: '.examples button' }
+      - { clickText: 'Interpret the note' }
+    highlight: { selector: '.understood' }
+    at: 0.55
+    captionSide: left
+    captionAt: 0.42
+    caption: "Try it in the demo: the words interpreter runs in your browser."
+  - url: https://lab.almilo.com/imci-fever/
+    width: 900
+    steps:
+      - { click: '.examples button' }
+      - { clickText: 'Interpret the note' }
+      - { clickText: 'Add to the form' }
+    highlight: { selector: '.side article' }
+    at: 0.83
+    captionSide: left
+    captionAt: 0.6
+    caption: "Add them to the form. The rules classify: MALARIA, with its treatments and WHO sources."
+end:
+  kicker: Software that knows · Part 6
+  title: The knowledge model as grounding
+  links:
+    - { label: 'Read the series:', text: almilo.com }
+    - { label: 'Try the words interpreter (part 6):', text: lab.almilo.com/imci-fever }
+  note: Demonstration only. Not a medical device.
+  seconds: 5

@@ -12,12 +12,20 @@
     "build": "pnpm validate && astro build",
     "preview": "astro preview",
     "validate": "node scripts/validate-content.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "medium": "node scripts/medium-export.mjs",
+    "teaser": "node scripts/teaser.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.2.2",
     "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5"
   }
 }
