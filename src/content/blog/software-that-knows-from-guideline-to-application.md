@@ -19,7 +19,7 @@ explicit, and derive the software from it. This part applies it end to end, to
 published clinical guidance, and shows the result as a working application.
 
 - **Demo:** [lab.almilo.com/imci-fever](https://lab.almilo.com/imci-fever/)
-- **Code:** [github.com/almilo/software-that-knows/imci-fever](https://github.com/almilo/software-that-knows/tree/main/imci-fever)
+- **Code:** [github.com/almilo/software-that-knows/imci-fever](https://github.com/almilo/software-that-knows/tree/part-5/imci-fever)
 
 **Disclaimer:** the application is a demonstration. It is not a medical device and has not been
 reviewed by a clinician.
@@ -106,7 +106,7 @@ The application rests on two models with different purposes.
 The knowledge model describes the domain: the questions, the conditions, the
 classifications and the treatments, each linked to the DAK entries it comes
 from. It is one
-[Turtle file](https://github.com/almilo/software-that-knows/blob/main/imci-fever/ontology/imci-fever.ttl)
+[Turtle file](https://github.com/almilo/software-that-knows/blob/part-5/imci-fever/ontology/imci-fever.ttl)
 of about 650 lines, in the format introduced in
 [part 4](https://almilo.com/blog/software-that-knows-where-knowledge-sits/).
 
@@ -148,11 +148,11 @@ each one is shown, and the decision tables in a form a program can evaluate. It
 knows nothing about fever. It is three JSON files, generated from the knowledge
 model:
 
-- **[`schema.json`](https://github.com/almilo/software-that-knows/blob/main/imci-fever/generated/schema.json):**
+- **[`schema.json`](https://github.com/almilo/software-that-knows/blob/part-5/imci-fever/generated/schema.json):**
   the fields, their types and their allowed values.
-- **[`uischema.json`](https://github.com/almilo/software-that-knows/blob/main/imci-fever/generated/uischema.json):**
+- **[`uischema.json`](https://github.com/almilo/software-that-knows/blob/part-5/imci-fever/generated/uischema.json):**
   the form layout, and when each field is shown.
-- **[`rules.json`](https://github.com/almilo/software-that-knows/blob/main/imci-fever/generated/rules.json):**
+- **[`rules.json`](https://github.com/almilo/software-that-knows/blob/part-5/imci-fever/generated/rules.json):**
   the decision tables, their rows and treatments.
 
 The same question, in the application model:
@@ -178,7 +178,7 @@ Every condition becomes a JSON Schema: the answers match the condition when they
 are valid against it. The form library ([JSON Forms](https://jsonforms.io/))
 and the classifier both use these schemas, so no separate rule engine is
 needed. The translation is short
-([`compile-condition.ts`](https://github.com/almilo/software-that-knows/blob/main/imci-fever/generator/compile-condition.ts)):
+([`compile-condition.ts`](https://github.com/almilo/software-that-knows/blob/part-5/imci-fever/generator/compile-condition.ts)):
 
 ```ts
 const field = o.one(c, `${IMCI}field`);
@@ -200,7 +200,7 @@ for (const op of ["allOf", "anyOf"]) {
 The application renders the form from `schema.json` and `uischema.json`, and
 evaluates `rules.json` against the answers. For each table in use, it finds the
 matching row and the treatments that apply
-([`classify.ts`](https://github.com/almilo/software-that-knows/blob/main/imci-fever/app/classify.ts)):
+([`classify.ts`](https://github.com/almilo/software-that-knows/blob/part-5/imci-fever/app/classify.ts)):
 
 ```ts
 return rules.tables
