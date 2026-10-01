@@ -23,3 +23,5 @@ pnpm-debug.log*
 /*.xlsx
 # Media made from posts: Medium exports and teaser videos (pnpm medium, pnpm teaser)
 .media/
+# Private notes on future articles (local only)
+article-ideas.md
