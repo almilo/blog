@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="398" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Phases -->
+  <g font-size="17" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="235" y="48">Before the app runs</text>
+    <text x="700" y="48">In the browser</text>
+  </g>
+  <g stroke="#b9b3a7" stroke-width="2" fill="none">
+    <path d="M30 62 v8 h410 v-8"/>
+    <path d="M530 62 v8 h340 v-8"/>
+  </g>
+
+  <!-- Knowledge model -->
+  <rect x="30" y="110" width="160" height="206" rx="10" fill="#0b5cd5"/>
+  <text x="110" y="194" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Knowledge</text>
+  <text x="110" y="218" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">model</text>
+  <text x="110" y="248" text-anchor="middle" font-size="16" fill="#ffffff">Turtle</text>
+
+  <!-- Generator arrow -->
+  <path d="M192 213 H262" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <g font-size="15" fill="#5c6470" text-anchor="middle">
+    <text x="229" y="200">generator</text>
+  </g>
+
+  <!-- Generated files -->
+  <g fill="#e6effc" stroke="#0b5cd5" stroke-width="2">
+    <rect x="270" y="110" width="170" height="44" rx="8"/>
+    <rect x="270" y="164" width="170" height="44" rx="8"/>
+    <rect x="270" y="218" width="170" height="44" rx="8"/>
+    <rect x="270" y="272" width="170" height="44" rx="8"/>
+  </g>
+  <g font-size="17" fill="#0b5cd5" text-anchor="middle">
+    <text x="355" y="138">schema.json</text>
+    <text x="355" y="192">uischema.json</text>
+    <text x="355" y="246">rules.json</text>
+    <text x="355" y="300">lexicon.json</text>
+  </g>
+
+  <!-- Arrows to the application -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M442 132 H526"/>
+    <path d="M442 186 H526"/>
+    <path d="M442 240 H526"/>
+    <path d="M442 294 H526"/>
+  </g>
+
+  <!-- Application -->
+  <g fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2">
+    <rect x="530" y="110" width="340" height="98" rx="10"/>
+    <rect x="530" y="218" width="340" height="44" rx="10"/>
+    <rect x="530" y="272" width="340" height="44" rx="10"/>
+  </g>
+  <text x="700" y="153" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2328">JSON Forms + AJV</text>
+  <text x="700" y="179" text-anchor="middle" font-size="16" fill="#5c6470">the form and its checks</text>
+  <g font-size="17" fill="#1f2328" text-anchor="middle">
+    <text x="700" y="246">Classifier: results and sources</text>
+    <text x="700" y="300">Note interpreter: words in notes</text>
+  </g>
+
+  <!-- Captions -->
+  <g font-size="15" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="110" y="352">the source of truth</text>
+    <text x="355" y="352">generated, kept in Git</text>
+    <text x="700" y="352">the application: no domain knowledge</text>
+  </g>
+</svg>
