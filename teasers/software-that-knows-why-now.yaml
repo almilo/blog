@@ -1,0 +1,51 @@
+# Teaser for part 2 (pnpm teaser software-that-knows-why-now).
+# Each scene: an optional url (default: the post), steps to run first, the element to highlight,
+# where to scroll it (at: fraction of the screen height, or top), and the caption.
+seconds: 3.8
+scenes:
+  - highlight: { text: 'capture an organisation' }
+    at: top
+    captionAt: 0.72
+    caption: "Part 2: why now?\nKnowledge at the centre of software."
+  - highlight: { text: 'The idea' }
+    at: 0.3
+    caption: "Not new: expert systems (1980s),\nmodel-driven development (2000s)."
+  - highlight: { kind: li, text: 'Both stalled' }
+    at: 0.35
+    caption: "Both stalled: formalising knowledge\nwas slow and expensive."
+  - highlight: { kind: li, text: 'It needed specialists' }
+    at: 0.35
+    caption: "It needed specialists\nto interview experts."
+  - highlight: { kind: li, text: 'knowledge acquisition' }
+    at: 0.35
+    caption: "Research had a name for it:\nthe knowledge acquisition bottleneck."
+  - highlight: { text: 'LLMs and agents lower the cost' }
+    at: 0.3
+    caption: "What changed: LLMs and agents\nlower the cost of the first draft."
+  - highlight: { kind: li, text: 'For example, a first draft' }
+    at: 0.35
+    caption: "A first ontology draft from an SOP,\nin one working session."
+  - highlight: { figure: effort-before-and-now }
+    at: 0.45
+    captionAt: 0.06
+    caption: "The draft covers about 80% of the content\nin about 20% of the time."
+  - highlight: { kind: li, text: 'The draft' }
+    at: 0.35
+    caption: "People take the other 80% of the time:\nexceptions, edge cases, unwritten rules."
+  - highlight: { kind: li, text: 'Review is needed for adoption' }
+    at: 0.35
+    caption: "Review is needed for adoption\nand for compliance."
+  - highlight: { kind: li, text: 'Accountability stays with people' }
+    at: 0.4
+    caption: "Accountability stays with people.\nAn LLM can't answer for a decision."
+  - highlight: { kind: ul, text: 'Human review costs more' }
+    at: 0.4
+    caption: "How we'd know it's wrong: review costs more\nthan extraction saves."
+end:
+  kicker: Software that knows · Part 2
+  title: Why now
+  links:
+    - { label: 'Read the series:', text: almilo.com }
+    - { label: 'See it working (part 5):', text: lab.almilo.com/imci-fever }
+  note: Demonstration only. Not a medical device.
+  seconds: 5
