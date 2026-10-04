@@ -105,14 +105,22 @@ function placeholder(kind, file, alt) {
 }
 
 // A table as a PNG in the style of the series: a blue header band, rows separated by thin lines,
-// the first column bold. Column widths follow the length of the longest cell.
+// the first column bold. Column widths follow the length of the longest cell, but a column is never
+// narrower than its header or its longest word, which cannot wrap.
 async function table(n) {
   const rows = n.children.map((row) => row.children.map((cell) => text(cell).trim()));
   const [header, ...body] = rows;
   const longest = header.map((_, c) => Math.max(...rows.map((r) => (r[c] ?? '').length)));
   const total = 940;
   const weights = longest.map((l) => Math.min(Math.max(l, 6), 60));
-  const widths = weights.map((w) => Math.round((w / weights.reduce((a, b) => a + b, 0)) * total));
+  const proportional = weights.map((w) => (w / weights.reduce((a, b) => a + b, 0)) * total);
+  const minimum = header.map((h, c) =>
+    Math.ceil(Math.max(h.length * 11, ...body.map((r) => Math.max(...(r[c] ?? '').split(/\s+/).map((w) => w.length)) * 10.4)) + 32),
+  );
+  const fixed = proportional.map((w, c) => Math.max(w, minimum[c]));
+  const extra = fixed.reduce((a, b) => a + b, 0) - total; // taken from the columns above their minimum
+  const room = fixed.reduce((a, w, c) => a + (w - minimum[c]), 0);
+  const widths = fixed.map((w, c) => Math.round(w - (extra > 0 && room > 0 ? ((w - minimum[c]) / room) * extra : 0)));
   const svg = tableSvg(header, body, widths);
   const index = uploads.filter((u) => u.kind === 'TABLE').length + 1;
   const name = `table-${index}`;
