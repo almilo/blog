@@ -1,0 +1,52 @@
+# Teaser for "What's in a field?" (pnpm teaser software-that-knows-whats-in-a-field).
+# Each scene: an optional url (default: the post), steps to run first, the element to highlight,
+# where to scroll it (at: fraction of the screen height, or top), and the caption.
+seconds: 4.2
+scenes:
+  - highlight: { text: 'An application usually keeps what it knows' }
+    at: top
+    captionAt: 0.80
+    caption: "One input field: about ten places\nin a usual application, each updated by hand."
+  - highlight: { figure: one-field-one-source }
+    at: 0.5
+    captionAt: 0.06
+    caption: "In an ontology, each fact is stated once,\nand every tool reads the same statements."
+  - highlight: { text: 'In 18 small steps' }
+    at: 0.4
+    caption: "One field in 18 small steps, from bare concept\nto translated question with a clinical rule."
+  - highlight: { text: 'An identifier that other models can point to' }
+    at: 0.45
+    caption: "Part A, the concept: a name, a definition,\nthe WHO source, a LOINC code."
+  - highlight: { text: 'These catch typing errors' }
+    at: 0.45
+    caption: "Part B, the question: type, limits, label,\nhelp text and when to ask."
+  - highlight: { text: 'The translations sit next to the question' }
+    at: 0.45
+    caption: "Translations sit next to the question:\nEnglish, French, Spanish, Arabic."
+  - highlight: { text: 'is now a fact with a name in four languages' }
+    at: 0.45
+    caption: "Part C: “37.5 °C is a fever” becomes data,\nnot a number inside a condition."
+  - highlight: { text: 'One rule covers every measurement site' }
+    at: 0.45
+    caption: "One rule covers every measurement site:\na new site needs an offset, not a rule."
+  - highlight: { text: 'When the source changes, the old range' }
+    at: 0.45
+    caption: "Part D: the words used in notes, and versions:\nan old range is replaced, not deleted."
+  - highlight: { kind: table, text: 'Usual place in an application' }
+    at: 0.45
+    captionAt: 0.86
+    caption: "Twelve kinds of knowledge that an application\nusually keeps in about ten places."
+  - highlight: { kind: li, text: 'One place for each fact.' }
+    at: 0.45
+    caption: "37.5 is stated once. Change it once,\nand everything derived follows."
+  - highlight: { text: 'The model is data, so it can be checked like data' }
+    at: 0.4
+    caption: "The model is data, so it can be checked:\nstructure, consistency, behaviour, change."
+end:
+  kicker: Software that knows, in detail
+  title: What's in a field?
+  links:
+    - { label: 'Read the series:', text: almilo.com }
+    - { label: 'The application of part 5:', text: lab.almilo.com/imci-fever }
+  note: Demonstration only. Not a medical device.
+  seconds: 5
