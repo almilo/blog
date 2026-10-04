@@ -5,6 +5,7 @@ pubDate: 2026-10-04
 tags: ['software-that-knows', 'ontology', 'shacl']
 series: 'Software that knows, in detail'
 image: '/images/software-that-knows/one-field-one-source.png'
+linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-ugcPost-7512514865551400960-Wt7v'
 medium: 'https://medium.com/@almilo/software-that-knows-in-detail-whats-in-a-field-24c88d3e29ef'
 draft: false
 ---
