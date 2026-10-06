@@ -1,0 +1,51 @@
+# Teaser for part 3 (pnpm teaser software-that-knows-what-knowing-means).
+# Each scene: an optional url (default: the post), steps to run first, the element to highlight,
+# where to scroll it (at: fraction of the screen height, or top), and the caption.
+seconds: 3.8
+scenes:
+  - highlight: { text: 'The series is called' }
+    at: top
+    captionAt: 0.72
+    caption: "Part 3: what does it mean\nfor software to know?"
+  - highlight: { text: 'A useful model is the DIKW' }
+    at: 0.3
+    caption: "The DIKW hierarchy (Ackoff, 1989):\neach level adds context to the one below."
+  - highlight: { kind: p, text: '01000010' }
+    at: 0.3
+    caption: "Data: just bits.\nOn its own, it answers nothing."
+  - highlight: { text: 'Body temperature of patient X' }
+    at: 0.3
+    caption: "Information: Data with context.\nWhat was measured, of whom, when."
+  - highlight: { text: 'Above about 38' }
+    at: 0.3
+    caption: "Knowledge: a pattern from many cases.\nIt answers how things behave."
+  - highlight: { text: 'Fever is the body' }
+    at: 0.3
+    caption: "Understanding: Knowledge of causes.\nIt answers why."
+  - highlight: { text: 'The right treatment depends' }
+    at: 0.3
+    caption: "Wisdom: judgement and values.\nWhat to do in this situation."
+  - highlight: { kind: ul, text: 'decode and add context' }
+    at: 0.35
+    caption: "Between the levels: decode, generalise,\nexplain causes, judge."
+  - highlight: { text: 'LLMs make these steps' }
+    at: 0.3
+    caption: "LLMs make these steps cheaper,\nespecially the lower ones."
+  - highlight: { figure: what-knowing-means }
+    at: 0.5
+    captionAt: 0.06
+    caption: "Agents can suggest at the top.\nPeople decide."
+  - highlight: { kind: li, text: 'Knowledge is buried in code' }
+    at: 0.35
+    caption: "Today, Knowledge is buried in code:\nif temperature > 38 then fever."
+  - highlight: { text: 'means Knowledge made explicit' }
+    at: 0.4
+    caption: "The goal: explicit Knowledge,\napplied to observations."
+end:
+  kicker: Software that knows · Part 3
+  title: What knowing means
+  links:
+    - { label: 'Read the series:', text: almilo.com }
+    - { label: 'See it working (part 5):', text: lab.almilo.com/imci-fever }
+  note: Demonstration only. Not a medical device.
+  seconds: 5
