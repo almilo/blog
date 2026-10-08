@@ -5,6 +5,7 @@ pubDate: 2026-10-08
 tags: ['software-that-knows', 'ontology', 'code-generation']
 series: 'Software that knows, in detail'
 image: '/images/software-that-knows/statements-to-form.png'
+medium: 'https://almilo.medium.com/software-that-knows-in-detail-from-statements-to-a-working-form-9cbd2cc5029b'
 draft: false
 ---
 

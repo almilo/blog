@@ -40,10 +40,11 @@ window.__list = () => [...document.querySelectorAll('[name][class*="graf"], hr')
   `${i} ${b.tagName} ${b.getAttribute('name') ?? ''}: ${(b.innerText || '').slice(0, 40).replace(/\n/g, '/')}`).join('\n');
 ```
 
-1. `__list()` shows the blocks with their `name`. Fix the title if the importer added " — almilo".
-2. Select from the first body block after the title to the last block before the AI disclaimer with `__select(first, last)`, then press Backspace (a real key). One empty paragraph remains.
+1. `__list()` shows the blocks with their `name`. Fix the title if the importer added " — almilo": put the caret at its end (`__caretEnd`) and press Backspace 9 times. Medium removes the dash with its spaces as a unit, so this also takes the title's last 2 characters: compare the title with the post's and type them back.
+2. Click into the first body paragraph (a real click: without it the editor ignores the keys), select from the first body block after the title to the last block before the AI disclaimer with `__select(first, last)`, then press Backspace (a real key). If nothing was deleted, press Backspace again: the selection is still there. One empty paragraph remains.
 3. Put the caret in it, focus the editor, and `__paste(<contents of body.html>)`.
 4. `__list()` again: no empty headings or quotes may remain; delete any with the caret at their start and Backspace.
+5. Medium splits a code block at each blank line into two code blocks. Join them: caret at the start of the second block, Backspace (a real key), then shift+Enter twice to bring the blank line back.
 
 ## 4. Images (browser)
 
@@ -59,7 +60,9 @@ For each `[[IMAGE n]]` / `[[TABLE n]]` placeholder in `manifest.uploads`, in ord
        return window.__origClick.call(this); }; }
    ```
    Then find the file input (`find`: "file input element") and upload `.media/<slug>/medium/<file>` with `file_upload`.
-4. Select the uploaded image (a real click), click "Alt text" in its toolbar, type the upload's `alt` from the manifest, and Save.
+4. Select the uploaded image (a real click), click "Alt text" in its toolbar, type the upload's `alt` from the manifest, and Save. Medium keeps at most 500 characters of alternative text, so a long table description is cut there.
+
+Take the coordinates of the "+" button and the toolbar from a screenshot: the page's own coordinates (`getBoundingClientRect`) do not match the screenshot's on every screen.
 
 ## 5. Check (browser)
 
@@ -70,8 +73,8 @@ Map the editor's blocks to the manifest's letters (P, H3, H4, LI, QUOTE, PRE, FI
 Click Publish in the editor. In the dialog:
 
 - **Preview title:** the post's title.
-- **Preview description** (the subtitle, at most 140 characters): `manifest.description`, not the series line.
+- **Preview description** (the subtitle, at most 140 characters): `manifest.description`, not the series line; shorten it when it is longer. Click the field first, then select all and type; check its value afterwards, since the dialog sometimes re-renders and drops the first input.
 - **Preview image:** the author's choice; usually the post's `image`.
-- **Topics:** the same five as the previous part of the series (read them from its Medium page). Type each one, press Down, then Return; clicking a suggestion does not always register.
+- **Topics:** the same five as the previous part of the series (read them from its Medium page, for example by fetching it and collecting its `/tag/` links). The suggestions often do not appear for typed text: type the topic without its last letter, wait a second, type the last letter, wait until the suggestions show, then press Down and check that the highlighted one is the topic itself (not, say, "Php Software Architecture") before Return. Clicking a suggestion does not register; to remove a wrong topic, click its remove button through the page (`button[aria-label="Remove …"]`).
 
 Then hand over to the author, who presses Publish. Afterwards, add the story's URL as `medium` in the post's front matter.
