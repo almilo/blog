@@ -1,5 +1,5 @@
 ---
-title: 'Software that knows, in detail: what''s in a field?'
+title: 'Software that knows, in detail: what''s in a field'
 description: 'One input field in an ontology, from bare concept to translated question with a rule: what an application keeps in ten places, stated once.'
 pubDate: 2026-10-04
 tags: ['software-that-knows', 'ontology', 'shacl']
@@ -205,7 +205,9 @@ means that earlier statements stay true, not that the application stays the
 same.
 
 The field also decides other questions: a value of 37.5 °C or more means fever,
-which reveals the fever questions and a whole tab.
+which reveals the fever questions and a whole tab (the
+[next companion article](https://almilo.com/blog/software-that-knows-from-statements-to-a-working-form/)
+shows the form).
 
 *imci-fever: the condition format is used; this condition is not (the
 temperature is always asked).*

@@ -1,4 +1,4 @@
-# Teaser for "What's in a field?" (pnpm teaser software-that-knows-whats-in-a-field).
+# Teaser for "What's in a field" (pnpm teaser software-that-knows-whats-in-a-field).
 # Each scene: an optional url (default: the post), steps to run first, the element to highlight,
 # where to scroll it (at: fraction of the screen height, or top), and the caption.
 seconds: 4.2
@@ -44,7 +44,7 @@ scenes:
     caption: "The model is data, so it can be checked:\nstructure, consistency, behaviour, change."
 end:
   kicker: Software that knows, in detail
-  title: What's in a field?
+  title: What's in a field
   links:
     - { label: 'Read the series:', text: almilo.com }
     - { label: 'The application of part 5:', text: lab.almilo.com/imci-fever }
