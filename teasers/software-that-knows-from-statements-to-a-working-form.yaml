@@ -1,0 +1,59 @@
+# Teaser for "From statements to a working form"
+# (pnpm teaser software-that-knows-from-statements-to-a-working-form).
+# Each scene: an optional url (default: the post), steps to run first, the element to highlight,
+# where to scroll it (at: fraction of the screen height, or top), and the caption.
+seconds: 4.2
+scenes:
+  - highlight: { text: 'described one form field, the axillary temperature' }
+    at: top
+    captionAt: 0.80
+    caption: "One form field, described as statements\nin an ontology. What do they become?"
+  - highlight: { text: 'None of this is written in the code' }
+    at: 0.4
+    caption: "The application's code is generic:\nit knows standards, not fever."
+  - highlight: { figure: statements-to-form }
+    at: 0.5
+    captionAt: 0.08
+    caption: "Before the app runs, a generator turns\nthe model into four JSON files."
+  - highlight: { text: 'is an open-source library, maintained by' }
+    at: 0.4
+    caption: "JSON Forms draws the form\nfrom a JSON Schema and a UI schema."
+  - highlight: { kind: li, text: 'It does not know:' }
+    at: 0.45
+    caption: "The generator knows SHACL, PROV-O and SKOS.\nIt does not know fever."
+  - highlight: { text: 'A small table maps each XML Schema type' }
+    at: 0.45
+    caption: "Type, limits and label become JSON Schema.\nA field without a type stops the generator."
+  - highlight: { figure: form-question }
+    at: 0.45
+    captionAt: 0.86
+    caption: "Label, input, help text from the WHO source,\nand the error: all from statements."
+  - highlight: { text: 'The generator turns each condition into JSON Schema' }
+    at: 0.45
+    caption: "A condition becomes a rule that shows\nor hides a question. The compiler: 35 lines."
+  - highlight: { kind: ul, text: 'An answer reveals a question.' }
+    at: 0.42
+    captionAt: 0.86
+    caption: "Questions and tabs appear with the answers:\nno UI code, only statements in the model."
+  - highlight: { figure: form-conditions }
+    at: 0.45
+    captionAt: 0.86
+    caption: "At 38.2 °C, the fever questions\nand a third tab appear."
+  - highlight: { kind: table, text: 'Statement in the model' }
+    at: 0.45
+    captionAt: 0.88
+    caption: "Each statement, and what it becomes\nin the application."
+  - highlight: { kind: ul, text: 'Standard inputs for standard libraries.' }
+    at: 0.42
+    caption: "Why generate: standard libraries,\nreviewable changes, less in the browser."
+  - highlight: { text: 'A second domain is the real test' }
+    at: 0.45
+    caption: "A second domain is the real test.\nA later article builds one."
+end:
+  kicker: Software that knows, in detail
+  title: From statements to a working form
+  links:
+    - { label: 'Read the series:', text: almilo.com }
+    - { label: 'The application of part 5:', text: lab.almilo.com/imci-fever }
+  note: Demonstration only. Not a medical device.
+  seconds: 5
