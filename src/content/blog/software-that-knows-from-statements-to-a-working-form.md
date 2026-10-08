@@ -1,28 +1,39 @@
 ---
 title: 'Software that knows, in detail: from statements to a working form'
 description: 'How a generator of about 370 lines turns the statements of a knowledge model into a form, validation, rules and words, without knowing what fever is.'
-pubDate: 2026-10-05
+pubDate: 2026-10-08
 tags: ['software-that-knows', 'ontology', 'code-generation']
 series: 'Software that knows, in detail'
 image: '/images/software-that-knows/statements-to-form.png'
-draft: true
+draft: false
 ---
 
 *A companion to the series "Software that knows". It follows the field from
-[What's in a field?](https://almilo.com/blog/software-that-knows-whats-in-a-field/)
+[What's in a field](https://almilo.com/blog/software-that-knows-whats-in-a-field/)
 into the running imci-fever application from
 [part 5](https://almilo.com/blog/software-that-knows-from-guideline-to-application/).*
 
 ## The path
 
 The previous companion article,
-[What's in a field?](https://almilo.com/blog/software-that-knows-whats-in-a-field/),
+[What's in a field](https://almilo.com/blog/software-that-knows-whats-in-a-field/),
 described one form field, the axillary temperature, as statements in an
 ontology: its data type, its limits, its label, when it is asked, its source and
-the words used for it in notes. This article follows those statements through
-the generator of the imci-fever application, and shows what each one becomes:
-an input in the form, a check of the value, a rule, or a word that the note
-interpreter looks for.
+the words used for it in notes.
+
+None of this is written in the code of the imci-fever application. Its code is
+generic: it knows standards such as SHACL and JSON Schema, but nothing about
+fever or children. A generator, the first part of that generic code, reads the
+model before the application runs and turns it into files that the rest of the
+code uses. This article follows the statements of the field through that
+generator, and shows what each one becomes: an input in the form, a check of
+the value, a rule, or a word to look for in a note.
+
+Notes came with
+[part 6](https://almilo.com/blog/software-that-knows-the-knowledge-model-as-grounding/):
+instead of filling in the form, a health worker can describe the child in free
+text. A note interpreter then finds the facts in the note, using the words of
+the model, and proposes answers for the form, which a person confirms.
 
 The path has three stages:
 
@@ -273,13 +284,14 @@ has three advantages here:
 The cost: the generated formats are less expressive than the model. JSON
 Schema can test a value against a number; it cannot convert a value
 measured at any other site of the body to an axillary one. The rule from the
-previous companion needs a rule engine that runs SPARQL, in the generator or in
+previous companion article needs a rule engine that runs SPARQL, in the generator or in
 the application.
 
 ## What the generator ignores, and how it grows
 
-The previous companion added statements that the imci-fever application does
-not use yet: a unit, translations, a maximum count, clinical ranges as data.
+The previous companion article,
+[What's in a field](https://almilo.com/blog/software-that-knows-whats-in-a-field/),
+added statements that the imci-fever application does not use yet: a unit, translations, a maximum count, clinical ranges as data.
 The generator reads only what it knows and ignores the rest, so these
 additions break nothing. Each one becomes useful with one more mapping, not
 with a change to the application:
@@ -290,7 +302,7 @@ with a change to the application:
 - **Unit:** add it to the title in the language of the form, instead of
   writing "(°C)" by hand in each label.
 - **Clinical ranges:** a rule engine derives the range from the data, as shown
-  in the previous companion.
+  in the previous companion article.
 
 This is the same monotonic growth, one level down: the model grows by adding
 statements, and the generator grows by adding mappings.
