@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="398" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Phases -->
+  <g font-size="17" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="450" y="44">Kept apart, joined by names</text>
+  </g>
+  <g stroke="#b9b3a7" stroke-width="2" fill="none">
+    <path d="M30 58 v8 h840 v-8"/>
+  </g>
+
+  <!-- Questions -->
+  <rect x="30" y="88" width="250" height="150" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="155" y="124" text-anchor="middle" font-size="21" font-weight="700" fill="#0b5cd5">Questions</text>
+  <text x="155" y="152" text-anchor="middle" font-size="16" fill="#222">how to describe a team</text>
+  <text x="155" y="176" text-anchor="middle" font-size="15" font-style="italic" fill="#5c6470">ours</text>
+  <text x="155" y="216" text-anchor="middle" font-size="15" font-family="Menlo, monospace" fill="#0b5cd5">criteria.ttl</text>
+
+  <!-- Opinion -->
+  <rect x="325" y="88" width="250" height="150" rx="10" fill="#0b5cd5"/>
+  <text x="450" y="124" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Opinion</text>
+  <text x="450" y="152" text-anchor="middle" font-size="16" fill="#ffffff">which style for which team</text>
+  <text x="450" y="176" text-anchor="middle" font-size="15" font-style="italic" fill="#dbe7fb">the author, mapped by us</text>
+  <text x="450" y="216" text-anchor="middle" font-size="15" font-family="Menlo, monospace" fill="#ffffff">rules.ttl</text>
+
+  <!-- Facts -->
+  <rect x="620" y="88" width="250" height="150" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="745" y="124" text-anchor="middle" font-size="21" font-weight="700" fill="#0b5cd5">Facts</text>
+  <text x="745" y="152" text-anchor="middle" font-size="16" fill="#222">what each style is like</text>
+  <text x="745" y="176" text-anchor="middle" font-size="15" font-style="italic" fill="#5c6470">the diagram</text>
+  <text x="745" y="216" text-anchor="middle" font-size="12" font-family="Menlo, monospace" fill="#0b5cd5">cloud-native-architecture.ttl</text>
+
+  <!-- The rules refer to the other two by name -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M323 163 H284"/>
+    <path d="M577 163 H616"/>
+  </g>
+  <g font-size="13" fill="#5c6470" text-anchor="middle" font-family="Menlo, monospace">
+    <text x="302" y="268">:TeamSizeLarge</text>
+    <text x="598" y="268">:Microservices</text>
+  </g>
+  <g font-size="13" fill="#5c6470" text-anchor="middle" font-style="italic">
+    <text x="302" y="252">when</text>
+    <text x="598" y="252">recommends</text>
+  </g>
+
+  <!-- To the app -->
+  <path d="M450 240 V306" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="200" y="310" width="500" height="62" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="450" y="337" text-anchor="middle" font-size="18" font-weight="700" fill="#222">The app</text>
+  <text x="450" y="360" text-anchor="middle" font-size="16" fill="#222">asks only what matters · decides · says why</text>
+</svg>

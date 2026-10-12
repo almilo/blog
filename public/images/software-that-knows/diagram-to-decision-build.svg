@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="398" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Phases -->
+  <g font-size="17" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="245" y="48">Before the app runs</text>
+    <text x="700" y="48">In the browser</text>
+  </g>
+  <g stroke="#b9b3a7" stroke-width="2" fill="none">
+    <path d="M30 62 v8 h430 v-8"/>
+    <path d="M530 62 v8 h340 v-8"/>
+  </g>
+
+  <!-- Ontology -->
+  <rect x="30" y="100" width="190" height="236" rx="10" fill="#0b5cd5"/>
+  <text x="125" y="134" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Ontology</text>
+  <text x="125" y="156" text-anchor="middle" font-size="15" fill="#dbe7fb">Turtle</text>
+  <g fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.5">
+    <rect x="46" y="176" width="158" height="44" rx="7"/>
+    <rect x="46" y="226" width="158" height="44" rx="7"/>
+    <rect x="46" y="276" width="158" height="44" rx="7"/>
+  </g>
+  <g font-size="16" fill="#ffffff" text-anchor="middle">
+    <text x="125" y="204">facts</text>
+    <text x="125" y="254">questions</text>
+    <text x="125" y="304">rules</text>
+  </g>
+
+  <!-- Generator -->
+  <path d="M222 218 H300" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="261" y="205" text-anchor="middle" font-size="15" fill="#5c6470">generator</text>
+
+  <!-- Generated file -->
+  <rect x="306" y="186" width="154" height="64" rx="8" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="383" y="214" text-anchor="middle" font-size="16" fill="#0b5cd5">decision.json</text>
+  <text x="383" y="236" text-anchor="middle" font-size="13" fill="#5c6470">one file</text>
+
+  <!-- To the browser -->
+  <path d="M462 218 H526" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Decision -->
+  <rect x="530" y="100" width="340" height="128" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="700" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#222">Decision</text>
+  <g font-size="15" fill="#222" text-anchor="middle">
+    <text x="700" y="160">the outcome of the answers</text>
+    <text x="700" y="183">the questions that can still change it</text>
+    <text x="700" y="206">why, and when to reconsider</text>
+  </g>
+
+  <path d="M700 230 V262" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- App -->
+  <rect x="530" y="266" width="340" height="70" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="700" y="296" text-anchor="middle" font-size="18" font-weight="700" fill="#222">App</text>
+  <text x="700" y="320" text-anchor="middle" font-size="15" fill="#222">shows what the decision returns</text>
+
+  <!-- Footnote -->
+  <text x="450" y="374" text-anchor="middle" font-size="14" font-style="italic" fill="#5c6470">The decision code knows nothing about architecture: it evaluates conditions and orders rules.</text>
+</svg>
