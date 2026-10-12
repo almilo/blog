@@ -104,7 +104,7 @@ function placeholder(kind, file, alt) {
   return `<p>${id}</p>`;
 }
 
-// A table as a PNG in the style of the series: a blue header band, rows separated by thin lines,
+// A table as a PNG in the style of the series: a light card with a blue header band, rows separated by thin lines,
 // the first column bold. Column widths follow the length of the longest cell, but a column is never
 // narrower than its header or its longest word, which cannot wrap.
 async function table(n) {
@@ -154,6 +154,8 @@ function tableSvg(header, body, widths) {
     y += height;
   }
   const H = y + 12;
+  // An opaque card, like the diagrams': Medium's dark mode would show the dark text on black.
+  parts.unshift(`<rect x="1" y="1" width="${total - 2}" height="${H - 2}" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>`);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${total} ${H}" width="${total}" height="${H}" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">\n${parts.join('\n')}\n</svg>\n`;
 }
 
