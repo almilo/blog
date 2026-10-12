@@ -5,6 +5,7 @@ pubDate: 2026-10-13
 tags: ['software-that-knows', 'knowledge-management', 'requirements']
 series: 'Software that knows'
 image: '/images/software-that-knows/rule-nobody-owns.png'
+medium: 'https://almilo.medium.com/software-that-knows-the-rule-nobody-owns-6cf78d1545b2'
 draft: false
 ---
 
