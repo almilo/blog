@@ -6,6 +6,7 @@ tags: ['software-that-knows', 'ontology', 'software-architecture']
 draft: false
 series: 'Software that knows'
 image: '/images/software-that-knows/diagram-to-decision.png'
+medium: 'https://almilo.medium.com/software-that-knows-from-a-diagram-to-a-decision-371a655874c6'
 ---
 
 *Part 7 of the series "Software that knows".*
