@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="468" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Sources -->
+  <text x="155" y="48" text-anchor="middle" font-size="17" font-style="italic" fill="#5c6470">Six sources, two contradictions</text>
+  <g fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2">
+    <rect x="30" y="70" width="250" height="40" rx="20"/>
+    <rect x="30" y="122" width="250" height="40" rx="20"/>
+    <rect x="30" y="174" width="250" height="40" rx="20"/>
+    <rect x="30" y="226" width="250" height="40" rx="20"/>
+    <rect x="30" y="278" width="250" height="40" rx="20"/>
+    <rect x="30" y="330" width="250" height="40" rx="20"/>
+  </g>
+  <g font-size="16" fill="#1f2328" text-anchor="middle">
+    <text x="155" y="96">Policy: 30 days</text>
+    <text x="155" y="148">Customer success: exceptions</text>
+    <text x="155" y="200">Finance: sign-off over €5,000</text>
+    <text x="155" y="252">Support: never applied</text>
+    <text x="155" y="304">Compliance: yes, and no</text>
+    <text x="155" y="356">Sales wiki: 60 days</text>
+  </g>
+
+  <!-- Two ways from the sources -->
+  <path d="M290 70 h8 v300 h-8 M298 220 h6" stroke="#b9b3a7" stroke-width="2" fill="none"/>
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M304 220 C330 220 326 125 352 125"/>
+    <path d="M304 220 C330 220 326 300 352 300"/>
+  </g>
+
+  <!-- Code: a hidden decision -->
+  <rect x="356" y="70" width="230" height="110" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="471" y="108" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2328">Code</text>
+  <text x="471" y="136" text-anchor="middle" font-size="16" fill="#1f2328">someone picks a reading</text>
+  <text x="471" y="160" text-anchor="middle" font-size="13" font-family="Menlo, monospace" fill="#5c6470">if (age &lt;= 30 || …)</text>
+
+  <path d="M590 125 H636" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="640" y="70" width="230" height="110" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="755" y="108" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2328">Hidden decisions</text>
+  <text x="755" y="136" text-anchor="middle" font-size="16" fill="#1f2328">made by whoever</text>
+  <text x="755" y="158" text-anchor="middle" font-size="16" fill="#1f2328">wrote the code</text>
+
+  <!-- Knowledge model: questions with owners -->
+  <rect x="356" y="230" width="230" height="140" rx="10" fill="#0b5cd5"/>
+  <text x="471" y="276" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Knowledge model</text>
+  <text x="471" y="306" text-anchor="middle" font-size="16" fill="#ffffff">rules, claims, sources</text>
+  <text x="471" y="330" text-anchor="middle" font-size="16" fill="#ffffff">and checks on them</text>
+
+  <path d="M590 300 H636" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="640" y="210" width="230" height="180" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="755" y="244" text-anchor="middle" font-size="21" font-weight="700" fill="#0b5cd5">Five questions</text>
+  <g font-size="15" fill="#1f2328">
+    <text x="662" y="276">Which refund window?</text>
+    <text x="662" y="300">Who owns the policy?</text>
+    <text x="662" y="324">Who stands behind 60 days?</text>
+    <text x="662" y="348">What is "exceptional"?</text>
+    <text x="662" y="372">Is the sign-off required?</text>
+  </g>
+
+  <!-- The point -->
+  <text x="450" y="432" text-anchor="middle" font-size="17" font-style="italic" fill="#5c6470">The model does not decide. It shows what has to be decided, and by whom.</text>
+</svg>
