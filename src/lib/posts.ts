@@ -8,10 +8,12 @@ export async function getPublishedPosts(): Promise<Post[]> {
   return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
-/** Published posts in a series, in reading order (oldest first). */
+/** The published parts of a series in reading order (oldest first), each with its companions. */
 export async function getSeriesPosts(series: string) {
-  const posts = await getPublishedPosts();
-  return posts.filter((post) => post.data.series === series).reverse();
+  const posts = (await getPublishedPosts()).filter((post) => post.data.series === series).reverse();
+  return posts
+    .filter((post) => !post.data.companion)
+    .map((part) => ({ part, companions: posts.filter((post) => post.data.companion === part.id) }));
 }
 
 export function formatDate(date: Date): string {

@@ -19,6 +19,10 @@ export const blogSchema = z
     draft: z.boolean().default(true),
     canonical: z.string().url('canonical must be an absolute URL').optional(),
     series: z.string().optional(),
+    companion: z
+      .string()
+      .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'companion must be the slug of a post, e.g. my-post')
+      .optional(),
     image: z
       .string()
       .startsWith('/', 'image must be a path under public/, e.g. /images/my-post/cover.png')

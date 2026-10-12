@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SeriesLink from '../../components/SeriesLink.astro';
 import { getPublishedPosts, getSeriesPosts, formatDate } from '../../lib/posts';
 
 export const getStaticPaths = (async () => {
@@ -66,12 +67,17 @@ const seriesPosts = post.data.series ? await getSeriesPosts(post.data.series) : 
         <nav class="series" aria-label={`Series: ${post.data.series}`}>
           <p class="series-title">Series: {post.data.series}</p>
           <ol>
-            {seriesPosts.map((entry) => (
+            {seriesPosts.map(({ part, companions }) => (
               <li>
-                {entry.id === post.id ? (
-                  <span aria-current="page">{entry.data.title}</span>
-                ) : (
-                  <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                <SeriesLink entry={part} current={post} />
+                {companions.length > 0 && (
+                  <ul class="companions">
+                    {companions.map((companion) => (
+                      <li>
+                        <SeriesLink entry={companion} current={post} />
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </li>
             ))}

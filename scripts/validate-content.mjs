@@ -95,6 +95,10 @@ for (const file of files) {
     problems.push(`image: ${data.image} does not exist under public/`);
   }
 
+  if (typeof data.companion === 'string' && !existsSync(resolve(CONTENT_DIR, `${data.companion}.md`))) {
+    problems.push(`companion: ${data.companion} is not a post in src/content/blog`);
+  }
+
   if (body.trim().length === 0) {
     problems.push('body: post has no content below the front matter');
   }

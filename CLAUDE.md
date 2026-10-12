@@ -48,6 +48,7 @@ schema there and both follow.
 | `draft`       | boolean         | no       | **defaults to `true`**                   |
 | `canonical`   | URL string      | no       | absolute URL; overrides the self-canonical |
 | `series`      | string          | no       | series name; posts sharing it are listed together |
+| `companion`   | slug string     | no       | the series part this post goes deeper into; listed under it, unnumbered |
 | `image`       | path string     | no       | path under `public/`, e.g. `/images/slug/x.png`; social preview |
 | `linkedin`    | URL string      | no       | the post's LinkedIn discussion; shown at the end |
 | `medium`      | URL string      | no       | the Medium copy of the post; shown at the end |
@@ -118,6 +119,11 @@ Posts with the same `series` value get a box at the end listing every
 *published* part, oldest first (`getSeriesPosts()` in `src/lib/posts.ts`). Order
 comes from `pubDate`, so give each part a distinct date. Keep a short
 hand-written "Part N" line in the text too: Medium imports have no series box.
+
+A post that goes deeper into one part, without being a part itself, gets
+`companion: <slug of that part>`: it is listed under that part, unnumbered, so the
+parts keep their numbers. Link it from the
+part's text too.
 
 Images live in `public/images/` and are referenced by absolute path, both in
 markdown and in the `image` field, so the same URL works on the site, in

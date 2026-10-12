@@ -1,0 +1,18 @@
+---
+import type { Post } from '../lib/posts';
+
+interface Props {
+  entry: Post;
+  current: Post;
+}
+
+const { entry, current } = Astro.props;
+---
+
+{
+  entry.id === current.id ? (
+    <span aria-current="page">{entry.data.title}</span>
+  ) : (
+    <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+  )
+}
