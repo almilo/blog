@@ -3,7 +3,8 @@ title: 'Software that knows, in detail: from statements to a working form'
 description: 'How a generator of about 370 lines turns the statements of a knowledge model into a form, validation, rules and words, without knowing what fever is.'
 pubDate: 2026-10-08
 tags: ['software-that-knows', 'ontology', 'code-generation']
-series: 'Software that knows, in detail'
+series: 'Software that knows'
+companion: 'software-that-knows-from-guideline-to-application'
 image: '/images/software-that-knows/statements-to-form.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-ugcPost-7513942807519293440-VM8E'
 medium: 'https://almilo.medium.com/software-that-knows-in-detail-from-statements-to-a-working-form-9cbd2cc5029b'

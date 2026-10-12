@@ -20,6 +20,9 @@ published clinical guidance, and shows the result as a working application.
 
 - **Demo:** [lab.almilo.com/imci-fever](https://lab.almilo.com/imci-fever/)
 - **Code:** [github.com/almilo/software-that-knows/imci-fever](https://github.com/almilo/software-that-knows/tree/part-5/imci-fever)
+- **In detail:** [What's in a field](https://almilo.com/blog/software-that-knows-whats-in-a-field/)
+  and [From statements to a working form](https://almilo.com/blog/software-that-knows-from-statements-to-a-working-form/)
+  follow one field from the knowledge model into the running application.
 
 **Disclaimer:** the application is a demonstration. It is not a medical device and has not been
 reviewed by a clinician.

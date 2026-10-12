@@ -3,7 +3,8 @@ title: 'Software that knows, in detail: what''s in a field'
 description: 'One input field in an ontology, from bare concept to translated question with a rule: what an application keeps in ten places, stated once.'
 pubDate: 2026-10-04
 tags: ['software-that-knows', 'ontology', 'shacl']
-series: 'Software that knows, in detail'
+series: 'Software that knows'
+companion: 'software-that-knows-from-guideline-to-application'
 image: '/images/software-that-knows/one-field-one-source.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-ugcPost-7512514865551400960-Wt7v'
 medium: 'https://medium.com/@almilo/software-that-knows-in-detail-whats-in-a-field-24c88d3e29ef'
