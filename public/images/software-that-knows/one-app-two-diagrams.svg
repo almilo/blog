@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="438" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Heading -->
+  <g font-size="17" font-style="italic" fill="#5c6470" text-anchor="middle">
+    <text x="450" y="44">Two domains, one vocabulary</text>
+  </g>
+  <g stroke="#b9b3a7" stroke-width="2" fill="none">
+    <path d="M30 58 v8 h840 v-8"/>
+  </g>
+
+  <!-- Domain: cloud-architecture -->
+  <rect x="30" y="88" width="250" height="212" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="155" y="122" text-anchor="middle" font-size="19" font-weight="700" fill="#0b5cd5">cloud-architecture</text>
+  <text x="155" y="146" text-anchor="middle" font-size="15" font-style="italic" fill="#5c6470">part 7, in its own words</text>
+  <g font-size="15" font-family="Menlo, monospace" fill="#0b5cd5" text-anchor="middle">
+    <text x="155" y="182">facts.ttl</text>
+    <text x="155" y="206">questions.ttl</text>
+    <text x="155" y="230">rules.ttl</text>
+    <text x="155" y="274">domain.ttl</text>
+  </g>
+  <text x="155" y="248" text-anchor="middle" font-size="13" font-style="italic" fill="#5c6470">unchanged</text>
+  <text x="155" y="291" text-anchor="middle" font-size="13" font-style="italic" fill="#5c6470">the words, mapped</text>
+
+  <!-- Vocabulary -->
+  <rect x="325" y="88" width="250" height="212" rx="10" fill="#0b5cd5"/>
+  <text x="450" y="122" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Vocabulary</text>
+  <text x="450" y="146" text-anchor="middle" font-size="15" font-style="italic" fill="#dbe7fb">neutral words for a choice</text>
+  <g font-size="16" fill="#ffffff" text-anchor="middle">
+    <text x="450" y="182">option · criterion</text>
+    <text x="450" y="206">choice rule · addition</text>
+    <text x="450" y="230">caution · branch · ladder</text>
+  </g>
+  <text x="450" y="274" text-anchor="middle" font-size="15" font-family="Menlo, monospace" fill="#ffffff">choice.ttl</text>
+
+  <!-- Domain: chatgpt-models -->
+  <rect x="620" y="88" width="250" height="212" rx="10" fill="#e6effc" stroke="#0b5cd5" stroke-width="2"/>
+  <text x="745" y="122" text-anchor="middle" font-size="19" font-weight="700" fill="#0b5cd5">chatgpt-models</text>
+  <text x="745" y="146" text-anchor="middle" font-size="15" font-style="italic" fill="#5c6470">the model tree, in these words</text>
+  <g font-size="15" font-family="Menlo, monospace" fill="#0b5cd5" text-anchor="middle">
+    <text x="745" y="182">facts.ttl</text>
+    <text x="745" y="206">questions.ttl</text>
+    <text x="745" y="230">rules.ttl</text>
+    <text x="745" y="274">domain.ttl</text>
+  </g>
+  <text x="745" y="248" text-anchor="middle" font-size="13" font-style="italic" fill="#5c6470">the tree, cautions, the ladder</text>
+
+  <!-- Both domains point at the vocabulary -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M282 188 H321"/>
+    <path d="M618 188 H579"/>
+  </g>
+  <g font-size="13" fill="#5c6470" text-anchor="middle" font-style="italic">
+    <text x="302" y="324">mapped</text>
+    <text x="598" y="324">written in</text>
+  </g>
+  <g font-size="12" fill="#5c6470" text-anchor="middle" font-family="Menlo, monospace">
+    <text x="302" y="340">subClassOf</text>
+  </g>
+
+  <!-- To the app -->
+  <path d="M450 302 V350" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="200" y="354" width="500" height="62" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="450" y="381" text-anchor="middle" font-size="18" font-weight="700" fill="#222">The app: generator · checks · page</text>
+  <text x="450" y="404" text-anchor="middle" font-size="16" fill="#222">knows only the words of the vocabulary</text>
+</svg>
