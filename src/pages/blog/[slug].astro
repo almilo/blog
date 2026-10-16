@@ -4,7 +4,7 @@ import type { GetStaticPaths } from 'astro';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SeriesLink from '../../components/SeriesLink.astro';
-import { getPublishedPosts, getSeriesPosts, formatDate } from '../../lib/posts';
+import { getPublishedPosts, getSeries, getSeriesPosts, formatDate } from '../../lib/posts';
 
 export const getStaticPaths = (async () => {
   const posts = await getPublishedPosts();
@@ -16,7 +16,8 @@ export const getStaticPaths = (async () => {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const seriesPosts = post.data.series ? await getSeriesPosts(post.data.series) : [];
+const series = post.data.series ? await getSeries(post.data.series) : undefined;
+const seriesPosts = series ? await getSeriesPosts(series.id) : [];
 ---
 
 <BaseLayout
@@ -63,9 +64,11 @@ const seriesPosts = post.data.series ? await getSeriesPosts(post.data.series) : 
       )
     }
     {
-      seriesPosts.length > 0 && (
-        <nav class="series" aria-label={`Series: ${post.data.series}`}>
-          <p class="series-title">Series: {post.data.series}</p>
+      series && seriesPosts.length > 0 && (
+        <nav class="series" aria-label={`Series: ${series.data.title}`}>
+          <p class="series-title">
+            Series: <a href={`/series/${series.id}/`}>{series.data.title}</a>
+          </p>
           <ol>
             {seriesPosts.map(({ part, companions }) => (
               <li>

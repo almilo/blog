@@ -4,13 +4,13 @@ description: 'A working application built from published WHO guidance: where the
 pubDate: 2026-09-28
 tags: ['software-that-knows', 'ontology', 'knowledge-management']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/guideline-to-application.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7510431005283950592-pNkx/'
 medium: 'https://medium.com/@almilo/software-that-knows-from-guideline-to-application-08a5b228f75e'
 ---
 
-*Part 5 of the series "Software that knows".*
+*Part 5 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Recap
 

@@ -1,0 +1,53 @@
+---
+import { render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedSeries, getSeriesPosts, formatDate } from '../../lib/posts';
+
+// One page for each series with published posts: its introduction, then its
+// parts in reading order, each with its companions.
+export const getStaticPaths = (async () => {
+  const all = await getPublishedSeries();
+  return all.map((series) => ({ params: { slug: series.id }, props: { series } }));
+}) satisfies GetStaticPaths;
+
+const { series } = Astro.props;
+const { Content } = await render(series);
+const parts = await getSeriesPosts(series.id);
+---
+
+<BaseLayout title={series.data.title} description={series.data.description}>
+  <p class="kicker">Series</p>
+  <h1>{series.data.title}</h1>
+  <p class="meta">
+    {parts.length} {parts.length === 1 ? 'part' : 'parts'} · <a href={`/series/${series.id}/rss.xml`}>RSS for this series</a>
+  </p>
+  <div class="prose">
+    <Content />
+  </div>
+  <ol class="series-parts">
+    {
+      parts.map(({ part, companions }) => (
+        <li>
+          <h2>
+            <a href={`/blog/${part.id}/`}>{part.data.title}</a>
+          </h2>
+          <time datetime={part.data.pubDate.toISOString()}>{formatDate(part.data.pubDate)}</time>
+          <p>{part.data.description}</p>
+          {companions.length > 0 && (
+            <ul class="series-companions">
+              {companions.map((companion) => (
+                <li>
+                  <span class="label">Companion</span>{' '}
+                  <a href={`/blog/${companion.id}/`}>{companion.data.title}</a>
+                  <p>{companion.data.description}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</BaseLayout>

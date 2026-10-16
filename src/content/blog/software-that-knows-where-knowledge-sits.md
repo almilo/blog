@@ -4,13 +4,13 @@ description: 'One fever rule, found in code, a database, configuration, an SOP a
 pubDate: 2026-09-27
 tags: ['software-that-knows', 'ontology', 'knowledge-management']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/where-knowledge-sits.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7509938251433136128-Z1Gl/'
 medium: 'https://medium.com/@almilo/software-that-knows-where-knowledge-sits-04fce838876b'
 ---
 
-*Part 4 of the series "Software that knows".*
+*Part 4 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Recap
 

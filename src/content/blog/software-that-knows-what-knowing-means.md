@@ -4,13 +4,13 @@ description: 'Data, information, knowledge, understanding and wisdom: what it me
 pubDate: 2026-09-26
 tags: ['software-that-knows', 'dikw', 'knowledge-management']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/what-knowing-means.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7509562130375938048-FLZi/'
 medium: 'https://medium.com/@almilo/software-that-knows-what-knowing-means-a780772bd63a'
 ---
 
-*Part 3 of the series "Software that knows".*
+*Part 3 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Knows what?
 

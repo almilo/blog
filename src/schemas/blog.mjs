@@ -18,7 +18,10 @@ export const blogSchema = z
     tags: z.array(z.string()),
     draft: z.boolean().default(true),
     canonical: z.string().url('canonical must be an absolute URL').optional(),
-    series: z.string().optional(),
+    series: z
+      .string()
+      .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'series must be the slug of a series, e.g. my-series')
+      .optional(),
     companion: z
       .string()
       .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'companion must be the slug of a post, e.g. my-post')

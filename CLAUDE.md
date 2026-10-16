@@ -47,7 +47,7 @@ schema there and both follow.
 | `tags`        | array of string | yes      | may be empty (`[]`)                      |
 | `draft`       | boolean         | no       | **defaults to `true`**                   |
 | `canonical`   | URL string      | no       | absolute URL; overrides the self-canonical |
-| `series`      | string          | no       | series name; posts sharing it are listed together |
+| `series`      | slug string     | no       | the slug of a series in `src/content/series/`; posts sharing it are listed together |
 | `companion`   | slug string     | no       | the series part this post goes deeper into; listed under it, unnumbered |
 | `image`       | path string     | no       | path under `public/`, e.g. `/images/slug/x.png`; social preview |
 | `linkedin`    | URL string      | no       | the post's LinkedIn discussion; shown at the end |
@@ -84,13 +84,17 @@ committing.
 ```
 src/
   content/blog/        posts (*.md) — the filename is the slug
-  content.config.ts    the `blog` collection; loads posts, applies the schema
-  schemas/blog.mjs     the Zod schema — single source of truth
+  content/series/      one file per series (*.md) — the filename is the slug
+  content.config.ts    the `blog` and `series` collections; load them, apply the schemas
+  schemas/blog.mjs     the Zod schema of a post — single source of truth
+  schemas/series.mjs   the Zod schema of a series
   lib/posts.ts         getPublishedPosts() — drafts out, newest first
   layouts/BaseLayout.astro   <head>, canonical tag, header/footer
   pages/
     index.astro        homepage: published posts, newest first
     blog/[slug].astro  a post
+    series/[slug].astro       a series: its introduction, then its parts
+    series/[slug]/rss.xml.ts  the feed of one series
     rss.xml.ts         /rss.xml
   styles/global.css    all styling
 public/
@@ -115,10 +119,29 @@ draft leaks into production.
 
 ## Series and images
 
+A series is a file in `src/content/series/`, and its filename is its slug:
+
+```yaml
+---
+title: 'Software that knows'          # max 70 characters
+description: 'One sentence for the series page and its feed.'   # max 160
+nav: true                             # a link in the header; defaults to false
+---
+The introduction of the series page, in markdown.
+```
+
+A post joins it with `series: <slug>`; `pnpm validate` fails if the series
+does not exist. Each series with at least one published post gets a page,
+`/series/<slug>/`, with its introduction and its parts, and a feed,
+`/series/<slug>/rss.xml`. A series with only drafts gets nothing. The header
+links to each published series with `nav: true`.
+
 Posts with the same `series` value get a box at the end listing every
-*published* part, oldest first (`getSeriesPosts()` in `src/lib/posts.ts`). Order
-comes from `pubDate`, so give each part a distinct date. Keep a short
-hand-written "Part N" line in the text too: Medium imports have no series box.
+*published* part, oldest first (`getSeriesPosts()` in `src/lib/posts.ts`); its
+title links to the series page. Order comes from `pubDate`, so give each part a
+distinct date. Keep a short hand-written "Part N" line in the text too, with the
+series name linked to the series page by its absolute URL: Medium imports have
+no series box.
 
 A post that goes deeper into one part, without being a part itself, gets
 `companion: <slug of that part>`: it is listed under that part, unnumbered, so the

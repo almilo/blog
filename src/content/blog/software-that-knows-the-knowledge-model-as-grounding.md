@@ -4,13 +4,13 @@ description: 'A free-text note instead of a form: four interpreters, from plain 
 pubDate: 2026-10-01
 tags: ['software-that-knows', 'ontology', 'llm']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/knowledge-model-as-grounding.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-ugcPost-7511423311508115456-z-ot/'
 medium: 'https://medium.com/@almilo/software-that-knows-the-knowledge-model-as-grounding-5249c1ec0122'
 ---
 
-*Part 6 of the series "Software that knows".*
+*Part 6 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Recap
 

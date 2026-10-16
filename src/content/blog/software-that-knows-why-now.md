@@ -4,13 +4,13 @@ description: 'Formalising business knowledge used to be slow and expensive. LLMs
 pubDate: 2026-09-25
 tags: ['software-that-knows', 'business-applications', 'knowledge-management', 'llm']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/effort-before-and-now.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_global-it-spending-will-reach-637-trillion-share-7509195219926671360-vMii/'
 medium: 'https://medium.com/@almilo/software-that-knows-why-now-95ab03d8aa4c'
 ---
 
-*Part 2 of the series "Software that knows".*
+*Part 2 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Recap
 

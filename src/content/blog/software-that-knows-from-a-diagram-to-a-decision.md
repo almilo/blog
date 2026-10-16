@@ -4,13 +4,13 @@ description: 'A popular comparison diagram, written down as facts, questions and
 pubDate: 2026-10-12
 tags: ['software-that-knows', 'ontology', 'software-architecture']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/diagram-to-decision.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7515477487292903424-isWo/'
 medium: 'https://almilo.medium.com/software-that-knows-from-a-diagram-to-a-decision-371a655874c6'
 ---
 
-*Part 7 of the series "Software that knows".*
+*Part 7 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Recap
 

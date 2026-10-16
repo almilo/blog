@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Fails with a non-zero exit code if any post in src/content/blog has invalid
- * front matter, an illegal slug, or a missing body.
+ * front matter, an illegal slug, or a missing body, or if any series in
+ * src/content/series has invalid front matter.
  *
  * `astro build` already enforces the Zod schema, but it stops at the first bad
  * file and reports it mid-build. This runs first and reports *every* problem
@@ -13,8 +14,10 @@ import { relative, resolve } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 
 import { blogSchema } from '../src/schemas/blog.mjs';
+import { seriesSchema } from '../src/schemas/series.mjs';
 
 const CONTENT_DIR = resolve(import.meta.dirname, '..', 'src', 'content', 'blog');
+const SERIES_DIR = resolve(import.meta.dirname, '..', 'src', 'content', 'series');
 const PUBLIC_DIR = resolve(import.meta.dirname, '..', 'public');
 const FRONT_MATTER = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 const SLUG_RULE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -51,6 +54,29 @@ const files = await markdownFiles(CONTENT_DIR).catch((error) => {
   if (error.code === 'ENOENT') return [];
   throw error;
 });
+
+// The series: each file must match the series schema. Their slugs are what a
+// post's `series` field may name.
+const seriesFiles = await markdownFiles(SERIES_DIR).catch((error) => {
+  if (error.code === 'ENOENT') return [];
+  throw error;
+});
+const seriesSlugs = new Set(seriesFiles.map((file) => file.split('/').pop().replace(/\.md$/, '')));
+
+for (const file of seriesFiles) {
+  const label = relative(process.cwd(), file);
+  const problems = checkSlug(file.split('/').pop());
+  const match = (await readFile(file, 'utf8')).match(FRONT_MATTER);
+  if (!match) {
+    problems.push('front matter: missing or malformed `---` delimited YAML block');
+  } else {
+    const result = seriesSchema.safeParse(parseYaml(match[1]) ?? {});
+    if (!result.success) {
+      for (const issue of result.error.issues) problems.push(`${issue.path.join('.') || 'front matter'}: ${issue.message}`);
+    }
+  }
+  if (problems.length > 0) failures.push({ file: label, problems });
+}
 
 for (const file of files) {
   checked += 1;
@@ -95,6 +121,10 @@ for (const file of files) {
     problems.push(`image: ${data.image} does not exist under public/`);
   }
 
+  if (typeof data.series === 'string' && !seriesSlugs.has(data.series)) {
+    problems.push(`series: ${data.series} is not a series in src/content/series`);
+  }
+
   if (typeof data.companion === 'string' && !existsSync(resolve(CONTENT_DIR, `${data.companion}.md`))) {
     problems.push(`companion: ${data.companion} is not a post in src/content/blog`);
   }
@@ -117,4 +147,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log(`✔ ${checked} post(s) validated — front matter and slugs OK.`);
+console.log(`✔ ${checked} post(s) and ${seriesFiles.length} series validated — front matter and slugs OK.`);

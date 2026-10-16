@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getNavSeries } from '../lib/posts';
 
 interface Props {
   title?: string;
@@ -20,6 +21,9 @@ const canonicalURL = canonical ?? selfUrl.href;
 const imageURL = image && new URL(image, Astro.site).href;
 
 const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
+
+// The series with `nav: true` get a link in the header.
+const navSeries = await getNavSeries();
 ---
 
 <!doctype html>
@@ -58,6 +62,11 @@ const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
       <header class="site-header">
         <a class="brand" href="/">{SITE_TITLE}</a>
         <nav>
+          {navSeries.map((series) => (
+            <a href={`/series/${series.id}/`} aria-current={Astro.url.pathname.startsWith(`/series/${series.id}/`) ? 'page' : undefined}>
+              {series.data.title}
+            </a>
+          ))}
           <a href="/rss.xml">RSS</a>
         </nav>
       </header>

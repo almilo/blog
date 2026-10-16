@@ -4,13 +4,13 @@ description: 'Business applications keep business knowledge implicit in code. A 
 pubDate: 2026-09-24
 tags: ['software-that-knows', 'business-applications', 'knowledge-management']
 draft: false
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/code-vs-knowledge-centric.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_global-it-spending-will-reach-637-trillion-share-7509195219926671360-vMii/'
 medium: 'https://medium.com/@almilo/software-that-knows-the-hypothesis-0dd1ae7d184f'
 ---
 
-*Part 1 of the series "Software that knows".*
+*Part 1 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## The problem
 

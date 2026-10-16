@@ -66,8 +66,16 @@ a {
 }
 
 .site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
   margin-left: auto;
   font-size: 0.9rem;
+}
+
+.site-header nav [aria-current='page'] {
+  color: var(--fg);
+  text-decoration: none;
 }
 
 .site-footer {
@@ -270,4 +278,69 @@ time,
   background: var(--code-bg);
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+/* A series page: the introduction, then the parts in reading order. */
+.kicker {
+  margin: 0 0 0.25rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.series-parts {
+  margin: 2.5rem 0 0;
+  padding-left: 1.6rem;
+}
+
+.series-parts > li {
+  margin-bottom: 1.75rem;
+}
+
+.series-parts > li::marker {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.series-parts h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+}
+
+.series-parts h2 a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.series-parts h2 a:hover {
+  color: var(--accent);
+}
+
+.series-parts time {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.series-parts p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.series-companions {
+  margin: 0.75rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+  list-style: none;
+}
+
+.series-companions li + li {
+  margin-top: 0.6rem;
+}
+
+.series-companions .label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }

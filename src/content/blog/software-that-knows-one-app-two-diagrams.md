@@ -3,14 +3,14 @@ title: 'Software that knows: one app, two diagrams'
 description: 'One generic app, a second diagram: the new domain is four files, no new code, and checks find two places where the drawing is ambiguous.'
 pubDate: 2026-10-16
 tags: ['software-that-knows', 'ontology', 'testing']
-series: 'Software that knows'
+series: 'software-that-knows'
 image: '/images/software-that-knows/one-app-two-diagrams.png'
 linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7516846543212228609-zg9C/'
 medium: 'https://almilo.medium.com/software-that-knows-one-app-two-diagrams-ffc4a8266c69'
 draft: false
 ---
 
-*Part 9 of the series "Software that knows".*
+*Part 9 of the series ["Software that knows"](https://almilo.com/series/software-that-knows/).*
 
 ## Recap
 
