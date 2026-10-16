@@ -70,12 +70,21 @@ async function block(n) {
       return `<p>${n.children.map(inline).join('')}</p>`;
     }
     case 'list': {
+      // Medium has no code block inside a list item: the list is closed before it and opened again after.
       const tag = n.ordered ? 'ol' : 'ul';
-      const items = n.children.map((li) => {
+      const parts = [];
+      let items = [];
+      for (const li of n.children) {
+        const [text, rest] = [li.children.filter((c) => c.type !== 'code'), li.children.filter((c) => c.type === 'code')];
         sequence.push('LI');
-        return `<li>${li.children.map((c) => (c.type === 'paragraph' ? c.children.map(inline).join('') : inline(c))).join(' ')}</li>`;
-      });
-      return `<${tag}>${items.join('')}</${tag}>`;
+        items.push(`<li>${text.map((c) => (c.type === 'paragraph' ? c.children.map(inline).join('') : inline(c))).join(' ')}</li>`);
+        if (rest.length) {
+          parts.push(`<${tag}>${items.join('')}</${tag}>`, ...(await Promise.all(rest.map(block))));
+          items = [];
+        }
+      }
+      if (items.length) parts.push(`<${tag}>${items.join('')}</${tag}>`);
+      return parts.join('\n');
     }
     case 'blockquote':
       sequence.push('QUOTE');
