@@ -176,8 +176,9 @@ Publish in both places.
   output of `pnpm medium <slug>` (Medium's importer drops lists that start with
   bold text, code blocks, tables and image descriptions), upload the images with
   their alternative text, and set the preview description and topics.
-- **make-teaser:** write `teasers/<slug>.yaml`, render the video with
-  `pnpm teaser <slug>`, and draft the LinkedIn post.
+- **make-teaser:** draft the LinkedIn post, with the post's diagram attached and
+  no video by default. Only on request, write `teasers/<slug>.yaml` and render a
+  teaser video with `pnpm teaser <slug>`.
 
 Then set `medium` and `linkedin` in the post's front matter.
 

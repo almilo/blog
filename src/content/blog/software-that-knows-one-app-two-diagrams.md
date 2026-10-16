@@ -5,6 +5,7 @@ pubDate: 2026-10-16
 tags: ['software-that-knows', 'ontology', 'testing']
 series: 'Software that knows'
 image: '/images/software-that-knows/one-app-two-diagrams.png'
+linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7516846543212228609-zg9C/'
 medium: 'https://almilo.medium.com/software-that-knows-one-app-two-diagrams-ffc4a8266c69'
 draft: false
 ---
