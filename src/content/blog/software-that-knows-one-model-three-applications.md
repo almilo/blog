@@ -5,6 +5,7 @@ pubDate: 2026-10-18
 tags: ['software-that-knows', 'ontology', 'architecture']
 series: 'software-that-knows'
 image: '/images/software-that-knows/rules-in-code-or-model.png'
+linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7517716887573569537-8QE0'
 medium: 'https://almilo.medium.com/software-that-knows-one-model-three-applications-on-three-stacks-28fe9046356d'
 draft: false
 ---
