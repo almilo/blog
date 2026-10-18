@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="558" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Heading -->
+  <text x="450" y="44" text-anchor="middle" font-size="17" font-style="italic" fill="#5c6470">One model, three applications</text>
+  <path d="M30 58 v8 h840 v-8" stroke="#b9b3a7" stroke-width="2" fill="none"/>
+
+  <!-- The knowledge model -->
+  <rect x="30" y="84" width="840" height="186" rx="10" fill="#0b5cd5"/>
+  <text x="50" y="112" font-size="19" font-weight="700" fill="#ffffff">Knowledge model</text>
+  <text x="850" y="112" text-anchor="end" font-size="14" font-style="italic" fill="#dbe7fb">Turtle: SHACL questions, SPARQL rules, texts in 4 languages, sources</text>
+
+  <g fill="#ffffff">
+    <rect x="70" y="128" width="200" height="50" rx="8"/>
+    <rect x="350" y="128" width="200" height="50" rx="8"/>
+    <rect x="630" y="128" width="200" height="50" rx="8"/>
+  </g>
+  <g font-size="16" font-weight="700" fill="#0b5cd5" text-anchor="middle" font-family="Menlo, monospace">
+    <text x="170" y="150">wef</text>
+    <text x="450" y="150">vested-benefits</text>
+    <text x="730" y="150">parental-allowance</text>
+  </g>
+  <g font-size="12" fill="#5c6470" text-anchor="middle">
+    <text x="170" y="168">pension money for a home</text>
+    <text x="450" y="168">the vested benefit in cash</text>
+    <text x="730" y="168">maternity, other parent</text>
+  </g>
+
+  <g fill="#dbe7fb">
+    <rect x="200" y="206" width="140" height="40" rx="8"/>
+    <rect x="380" y="206" width="140" height="40" rx="8"/>
+    <rect x="610" y="200" width="240" height="52" rx="8"/>
+  </g>
+  <g font-size="14" fill="#0b5cd5" text-anchor="middle" font-family="Menlo, monospace">
+    <text x="270" y="231">person</text>
+    <text x="450" y="231">pension</text>
+    <text x="730" y="224">form.ttl · law modules</text>
+  </g>
+  <g stroke="#ffffff" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M170 180 L392 204"/>
+    <path d="M450 180 L450 204"/>
+  </g>
+  <path d="M380 226 L342 226" stroke="#ffffff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="730" y="243" text-anchor="middle" font-size="12" font-style="italic" fill="#5c6470">used by every domain</text>
+  <text x="56" y="224" font-size="13" font-style="italic" fill="#dbe7fb">shared</text>
+  <text x="56" y="241" font-size="13" font-style="italic" fill="#dbe7fb">modules</text>
+
+  <!-- Cores -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M230 272 V306"/>
+    <path d="M670 272 V306"/>
+  </g>
+  <g fill="#e6effc" stroke="#0b5cd5" stroke-width="2">
+    <rect x="80" y="310" width="300" height="62" rx="10"/>
+    <rect x="520" y="310" width="300" height="62" rx="10"/>
+  </g>
+  <g font-size="16" font-weight="700" fill="#0b5cd5" text-anchor="middle">
+    <text x="230" y="336">TypeScript core</text>
+    <text x="670" y="336">Java core</text>
+  </g>
+  <g font-size="13" fill="#5c6470" text-anchor="middle">
+    <text x="230" y="358">Oxigraph, in WebAssembly</text>
+    <text x="670" y="358">Apache Jena</text>
+  </g>
+
+  <path d="M384 341 H516" stroke="#5c6470" stroke-width="2.5" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="450" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">shared cases</text>
+  <text x="450" y="362" text-anchor="middle" font-size="12" fill="#5c6470">240 decisions</text>
+  <text x="450" y="378" text-anchor="middle" font-size="12" fill="#5c6470">44 formats</text>
+
+  <!-- Applications -->
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M230 374 V420"/>
+    <path d="M600 374 L540 420"/>
+    <path d="M740 374 L780 420"/>
+  </g>
+  <g fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2">
+    <rect x="80" y="424" width="300" height="86" rx="10"/>
+    <rect x="410" y="424" width="230" height="86" rx="10"/>
+    <rect x="660" y="424" width="210" height="86" rx="10"/>
+  </g>
+  <g font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">
+    <text x="230" y="450">Browser wizard</text>
+    <text x="525" y="450">Server wizard</text>
+    <text x="765" y="450">Process and tasks</text>
+  </g>
+  <g font-size="13" fill="#5c6470" text-anchor="middle">
+    <text x="230" y="472">React + Bun, JSON Forms</text>
+    <text x="230" y="492">a static site, online</text>
+    <text x="525" y="472">Vaadin + Spring Boot</text>
+    <text x="525" y="492">the model stays on the server</text>
+    <text x="765" y="472">Flowable, htmx, BPMN</text>
+    <text x="765" y="492">next steps become tasks</text>
+  </g>
+
+  <text x="450" y="540" text-anchor="middle" font-size="15" fill="#1f2328">No application knows a domain: each knows only the vocabulary of the form</text>
+</svg>

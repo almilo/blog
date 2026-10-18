@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5c6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="518" rx="12" fill="#fffdf9" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Left: rules in the code -->
+  <text x="225" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2328">Rules in the code</text>
+  <text x="225" y="68" text-anchor="middle" font-size="16" font-style="italic" fill="#5c6470">a new technology means a rewrite</text>
+
+  <g fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2">
+    <rect x="60" y="88" width="330" height="124" rx="10"/>
+    <rect x="60" y="322" width="330" height="124" rx="10"/>
+  </g>
+  <g font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">
+    <text x="225" y="112">Application, technology A</text>
+    <text x="225" y="346">Application, technology B</text>
+  </g>
+  <g font-size="14" fill="#5c6470" text-anchor="middle">
+    <text x="115" y="140">UI</text>
+    <text x="225" y="140">services</text>
+    <text x="335" y="140">database</text>
+    <text x="115" y="374">UI</text>
+    <text x="225" y="374">services</text>
+    <text x="335" y="374">database</text>
+  </g>
+  <g fill="#e6effc" stroke="#0b5cd5" stroke-width="2" stroke-dasharray="5 4">
+    <rect x="85" y="152" width="60" height="26" rx="13"/>
+    <rect x="195" y="152" width="60" height="26" rx="13"/>
+    <rect x="160" y="182" width="60" height="26" rx="13"/>
+    <rect x="305" y="152" width="60" height="26" rx="13"/>
+    <rect x="85" y="386" width="60" height="26" rx="13"/>
+    <rect x="195" y="386" width="60" height="26" rx="13"/>
+    <rect x="270" y="416" width="60" height="26" rx="13"/>
+    <rect x="305" y="386" width="60" height="26" rx="13"/>
+  </g>
+  <g font-size="14" fill="#0b5cd5" text-anchor="middle">
+    <text x="115" y="170">rule</text>
+    <text x="225" y="170">rule</text>
+    <text x="190" y="200">rule</text>
+    <text x="335" y="170">rule</text>
+    <text x="115" y="404">rule</text>
+    <text x="225" y="404">rule</text>
+    <text x="300" y="434">rule?</text>
+    <text x="335" y="404">rule</text>
+  </g>
+
+  <path d="M225 216 V316" stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <g font-size="15" fill="#1f2328">
+    <text x="240" y="244">rewrite:</text>
+    <text x="240" y="264">find the rules again,</text>
+    <text x="240" y="284">write them again,</text>
+    <text x="240" y="304">prove it decides the same</text>
+  </g>
+  <text x="225" y="482" text-anchor="middle" font-size="16" fill="#5c6470">The knowledge moves only by hand</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="40" x2="450" y2="480" stroke="#e5e1d8" stroke-width="2"/>
+
+  <!-- Right: rules in a model -->
+  <text x="675" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2328">Rules in a model</text>
+  <text x="675" y="68" text-anchor="middle" font-size="16" font-style="italic" fill="#5c6470">a new technology means a new application</text>
+
+  <rect x="555" y="88" width="240" height="96" rx="10" fill="#0b5cd5"/>
+  <text x="675" y="118" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Knowledge model</text>
+  <text x="675" y="144" text-anchor="middle" font-size="15" fill="#dbe7fb">questions, rules, next steps,</text>
+  <text x="675" y="166" text-anchor="middle" font-size="15" fill="#dbe7fb">and the law each comes from</text>
+
+  <g stroke="#5c6470" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M610 186 L533 266"/>
+    <path d="M655 186 L640 266"/>
+    <path d="M700 186 L748 266"/>
+  </g>
+  <path d="M745 186 L840 266" stroke="#5c6470" stroke-width="2.5" stroke-dasharray="6 5" fill="none" marker-end="url(#arrow)"/>
+  <text x="556" y="220" font-size="14" font-style="italic" fill="#5c6470" text-anchor="end">runs</text>
+
+  <g fill="#e6effc" stroke="#0b5cd5" stroke-width="2">
+    <rect x="474" y="270" width="98" height="92" rx="10"/>
+    <rect x="584" y="270" width="98" height="92" rx="10"/>
+    <rect x="694" y="270" width="98" height="92" rx="10"/>
+  </g>
+  <rect x="804" y="270" width="80" height="92" rx="10" fill="#fffdf9" stroke="#b9b3a7" stroke-width="2" stroke-dasharray="6 5"/>
+  <g font-size="14" font-weight="700" fill="#0b5cd5" text-anchor="middle">
+    <text x="523" y="298">Browser</text>
+    <text x="523" y="316">wizard</text>
+    <text x="633" y="298">Server</text>
+    <text x="633" y="316">wizard</text>
+    <text x="743" y="298">Process</text>
+    <text x="743" y="316">and tasks</text>
+  </g>
+  <g font-size="12" fill="#5c6470" text-anchor="middle">
+    <text x="523" y="344">React + Bun</text>
+    <text x="633" y="344">Vaadin</text>
+    <text x="743" y="344">Flowable</text>
+    <text x="844" y="312">the next</text>
+    <text x="844" y="328">one</text>
+  </g>
+
+  <rect x="474" y="384" width="410" height="54" rx="10" fill="#f4f2ec" stroke="#b9b3a7" stroke-width="2"/>
+  <text x="679" y="407" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2328">Shared cases</text>
+  <text x="679" y="427" text-anchor="middle" font-size="14" fill="#1f2328">every application must decide the same</text>
+
+  <text x="675" y="482" text-anchor="middle" font-size="16" fill="#5c6470">The knowledge stays; the code is a means to an end</text>
+</svg>
