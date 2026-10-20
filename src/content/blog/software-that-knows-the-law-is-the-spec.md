@@ -183,7 +183,9 @@ reviews a result that already passes, not one that might.
    generator and the app for words and numbers of the law. A separate search
    after the runs found none. This is the separation of
    [part 4](https://almilo.com/blog/software-that-knows-where-knowledge-sits/#the-knowledge-centric-approach-one-file):
-   the knowledge is in one file, and the code does not know it.
+   the knowledge is in one file, and the code does not know it. Part 10 made
+   the same check on three applications
+   ([claim 1](https://almilo.com/blog/software-that-knows-one-model-three-applications/#claim-1-the-knowledge-is-in-the-model-not-in-the-applications)).
 3. **A deterministic generator.** Run twice, each generator writes the same
    files. The stochastic step is the model; everything after it is code, as in
    [part 5](https://almilo.com/blog/software-that-knows-from-guideline-to-application/#stochastic-and-deterministic).
@@ -288,7 +290,9 @@ Most of each model is the law: its articles with their original text, sources,
 interpretations and open points. The generator and the app are small and know
 none of it. For a second process, they could stay as they are,
 as [part 9](https://almilo.com/blog/software-that-knows-one-app-two-diagrams/)
-showed for a second domain in the same application.
+showed for a second domain in the same application, and
+[part 10](https://almilo.com/blog/software-that-knows-one-model-three-applications/#claim-3-a-new-domain-needs-only-its-model)
+for three processes under three laws.
 
 ## How we'd know it's wrong
 
