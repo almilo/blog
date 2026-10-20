@@ -34,18 +34,33 @@ process.
 
 ## Where the magic happens
 
-Three things go in, and none of them is a specification in the usual sense:
+No single ingredient is new. What works is putting all of them together, so
+that each step of the pipeline has what it needs and nothing more:
 
-1. **A reference.** A document that can serve as a specification, without
-   being complete or perfect: a law, a guideline, a policy, an SOP. Here, a law.
-2. **Little guidance.** A short prompt about the architecture and the
-   behaviour. It does not explain the reference, and it does not name a single
-   question or rule.
-3. **A goal the agent can check.** A test that passes or fails, so that "done"
-   is not the agent's opinion.
+1. **An outcome, with its proof.** Not a list of features, but what we want:
+   something that works. And a way to show that it works: an acceptance test for
+   at least the one scenario that sets the goal. The agent can run it itself, so
+   "done" is not its opinion.
+2. **Directives for the architecture.** The technologies to use, and the type
+   of application: here, a form that asks only the relevant questions and shows
+   its results with their sources. It could as well be a multi-step form or a
+   wizard. These are decisions we want to keep, so we make them in advance.
+3. **A source, as the reference.** A document that can serve as a specification, without being
+   complete or perfect: a law, a guideline, a policy, an SOP. Here, a law.
+4. **A method.** How to turn the source into software: formalise the knowledge
+   as a model in open standards, an ontology, with each rule and its source;
+   keep the code free of that knowledge; mark every interpretation. This is the
+   approach of this series, given to the agent in a few lines.
+5. **Freedom, for a capable agent.** Nothing about how to read the source, which
+   questions to ask, or how to write the generator. A frontier coding agent
+   fills that space itself, and works until the test passes.
 
-A frontier coding agent turns these into a working application in less than an
-hour. That is the 80%. It is not 100%, and the gap does not close by running
+Together, they make a pipeline. The source goes in, the method turns it into a
+knowledge model, a generator turns the model into an application of the type
+we asked for, and the acceptance test checks the outcome. Each ingredient
+steers one step, and none of them is long: the prompt below has 329 words.
+
+That is enough to get a working application in less than an hour: the 80%. It is not 100%, and the gap does not close by running
 the agent again. The last 20% is review and acceptance, and only people can do
 it, because only people can own the result.
 
@@ -119,17 +134,19 @@ SHACL engine:
 Report: list your interpretations, the open points, and the commands to run.
 ```
 
-The prompt has 329 words, and maps onto the three inputs:
+Each part of the prompt is one of the ingredients:
 
-| Input | In the prompt | What it controls |
+| Ingredient | In the prompt | What it controls |
 | --- | --- | --- |
-| The reference | Source, scope | The content: every requirement comes from here |
-| Little guidance | Task, architecture, behaviour, requirements | The shape: a model, a generator, an app that knows neither ([part 5](https://almilo.com/blog/software-that-knows-from-guideline-to-application/#two-models)) |
-| A goal to check | Done when, and the test for no law in the code | When the agent stops |
-| What to show us | Rules on sources, interpretations and open points; report | Whether the decisions are visible |
+| An outcome, with its proof | Task; done when | What "working" means, and when the agent stops |
+| Directives for the architecture | Architecture 2 and 3; behaviour; requirements | The type of application and its technology |
+| A source | Source; scope | The content: every requirement comes from here |
+| A method | Architecture 1; rules | Knowledge in a model with its sources, code without it ([part 5](https://almilo.com/blog/software-that-knows-from-guideline-to-application/#two-models)), decisions marked |
+| Freedom | Everything the prompt leaves out | The questions, the rules, the vocabulary, the generator |
 
-The last row matters most for the last 20%. Without it, the agent still makes
-the decisions, but they disappear into the model or the code.
+The rules of the method matter most for the last 20%. Without "mark every
+interpretation", the agent still makes the decisions, but they disappear into
+the model or the code.
 
 ## The 80%
 
