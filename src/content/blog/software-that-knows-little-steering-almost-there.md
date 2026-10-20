@@ -1,6 +1,6 @@
 ---
-title: 'Software that knows: 80% from a reference and a goal'
-description: 'A reference, little guidance and a goal it can check: a coding agent gets 80% there in under an hour. The last 20% is ours: review, accept, freeze.'
+title: 'Software that knows: little steering, almost there'
+description: 'A reference, a short prompt and a goal it can check: a coding agent gets almost there, and a final review takes it the rest of the way.'
 pubDate: 2026-11-06
 tags: ['software-that-knows', 'llm', 'coding-agents', 'ontology']
 series: 'software-that-knows'
