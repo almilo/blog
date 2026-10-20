@@ -24,9 +24,9 @@ generator, an earlier application, a person who knew the target. This part
 tests the case with nothing to start from: the first process.
 
 - **Code:** three runs, on three branches:
-  [run 4](https://github.com/almilo/software-that-knows/tree/first-process-run-4),
-  [run 5](https://github.com/almilo/software-that-knows/tree/first-process-run-5),
-  [run 6](https://github.com/almilo/software-that-knows/tree/first-process-run-6)
+  [run 1](https://github.com/almilo/software-that-knows/tree/first-process-run-4),
+  [run 2](https://github.com/almilo/software-that-knows/tree/first-process-run-5),
+  [run 3](https://github.com/almilo/software-that-knows/tree/first-process-run-6)
 
 The process is family allowances under Swiss federal law. The applications are
 a demonstration, not legal advice, and not checked by a family compensation
@@ -121,7 +121,7 @@ the scope and the expected result of one case.
 
 ## What came out
 
-| | Run 4 | Run 5 | Run 6 |
+| | Run 1 | Run 2 | Run 3 |
 | --- | --- | --- | --- |
 | Time, cost | 21 min, USD 5.46 | 42 min, USD 9.29 | 25 min, USD 7.02 |
 | Happy path | Passes | Passes | Passes |
@@ -142,7 +142,7 @@ and counts as not gainfully employed (Art. 13 para. 3 and Art. 19 para. 1bis).
 Then the taxable income matters, and only then. In all three applications, that
 question appears at that moment, and not before:
 
-![The application of run 4 with an income of CHF 5,000. Under Applicant, the questions about the taxable annual income and supplementary benefits have appeared below the income. On the right, two next steps: "Income below the minimum: counts as not gainfully employed", with the minimum annual earned income of CHF 7'560 and the original German text of FamZG Art. 13 para. 3 and Art. 19 para. 1bis as sources; and "Answer the next question: Taxable annual income (CHF)", with FamZG Art. 19 para. 2.](/images/software-that-knows/first-process-below-minimum.png)
+![The application of run 1 with an income of CHF 5,000. Under Applicant, the questions about the taxable annual income and supplementary benefits have appeared below the income. On the right, two next steps: "Income below the minimum: counts as not gainfully employed", with the minimum annual earned income of CHF 7'560 and the original German text of FamZG Art. 13 para. 3 and Art. 19 para. 1bis as sources; and "Answer the next question: Taxable annual income (CHF)", with FamZG Art. 19 para. 2.](/images/software-that-knows/first-process-below-minimum.png)
 
 ## Claim 1: the law is enough as a specification
 
@@ -224,13 +224,13 @@ Some decisions differ, and each is defensible:
 
 - **The income of a child in education.** A child who earns more than the
   maximum full AHV pension does not count as in education. That limit is not in
-  the FamZG but in an ordinance. Run 4 marked it as an open point. Run 5 wrote
-  the rule and switched it off, as open. Run 6 asks the question and adds a next
+  the FamZG but in an ordinance. Run 1 marked it as an open point. Run 2 wrote
+  the rule and switched it off, as open. Run 3 asks the question and adds a next
   step: confirm the child's income.
-- **Counts as not gainfully employed.** Run 4 shows it as a next step: answer
-  the questions about the taxable income. Runs 5 and 6 show it as a value.
+- **Counts as not gainfully employed.** Run 1 shows it as a next step: answer
+  the questions about the taxable income. Runs 2 and 3 show it as a value.
 
-![The application of run 6 at the end of the happy path. On the left, seven answers and one more question: does the child earn on average more than the maximum full AHV old-age pension a month? On the right, the value: education allowance, at least CHF 268 a month, from 2025-08-01 until the end of the education, but until 2034-03-31 at the latest, with FamZG Art. 3 para. 1 b and Art. 5 para. 2. Below, two next steps: give the application to your employer, and confirm that the child earns not more than CHF 2'520 a month, with AHVG Art. 34 para. 3, AHVV Art. 49bis para. 3 and the pension ordinances as sources.](/images/software-that-knows/first-process-happy-path.png)
+![The application of run 3 at the end of the happy path. On the left, seven answers and one more question: does the child earn on average more than the maximum full AHV old-age pension a month? On the right, the value: education allowance, at least CHF 268 a month, from 2025-08-01 until the end of the education, but until 2034-03-31 at the latest, with FamZG Art. 3 para. 1 b and Art. 5 para. 2. Below, two next steps: give the application to your employer, and confirm that the child earns not more than CHF 2'520 a month, with AHVG Art. 34 para. 3, AHVV Art. 49bis para. 3 and the pension ordinances as sources.](/images/software-that-knows/first-process-happy-path.png)
 
 The design converged too. Without a hint, each run added one term to its
 vocabulary for when a question is asked: `askWhen`, `relevantIf`,
@@ -278,7 +278,7 @@ longer than writing the model by hand, the 80/20 split does not hold.
 
 ## What it costs
 
-| Part | Run 4 | Run 5 | Run 6 |
+| Part | Run 1 | Run 2 | Run 3 |
 | --- | --- | --- | --- |
 | Model and vocabulary (Turtle) | 1,024 lines | 1,215 lines | 1,690 lines |
 | Generator | 392 | 326 | 275 |
