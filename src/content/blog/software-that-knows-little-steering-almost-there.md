@@ -60,8 +60,10 @@ knowledge model, a generator turns the model into an application of the type
 we asked for, and the acceptance test checks the outcome. Each ingredient
 steers one step, and none of them is long: the prompt below has 329 words.
 
-That is enough to get a working application in less than an hour: the 80%. It is not 100%, and the gap does not close by running
-the agent again. The last 20% is review and acceptance, and only people can do
+![Two panels. The upper panel, "The pipeline: five ingredients, each steers one step", shows five boxes from left to right: Source (ingredient 3: the reference, not perfect), Coding agent (ingredient 5: with freedom), Knowledge model (requirements and decisions), Generator (deterministic, written by the agent, frozen) and Application (no knowledge of the source). Ingredient 4, "A method: ontology, sources", points down to the coding agent. Ingredient 2, "Directives for the architecture: technologies, type of application", points down to the generator and the application. Below the application, ingredient 1, "Outcome: acceptance test", checks the application, and an arrow back to the coding agent says "the agent works until the test passes". The lower panel, "The effort", compares two bars on a time axis. Before: one long bar, "Specify, then implement: weeks to months". Now: a short bar with a thin segment, "Agent: 20 to 40 minutes, about 80% of the result", and a wider one, "Review and acceptance: a few hours, about 4 times more". Illustrative, not to scale.](/images/software-that-knows/little-steering-pipeline.png)
+
+That is enough to get a working application in less than an hour: the 80%.
+It is not 100%, and the gap does not close by running the agent again. The last 20% is review and acceptance, and only people can do
 it, because only people can own the result.
 
 What the agent delivers has two parts, and the difference between them is the
@@ -291,7 +293,18 @@ The three runs show both the value and the need for review:
 So the review in the last 20% has two objects: the model, which holds the
 knowledge, and the generator, which is reviewed once and then reused.
 
-## What it costs
+## The effort
+
+[Part 2](https://almilo.com/blog/software-that-knows-why-now/#what-changed)
+compared two ways to get formal knowledge into software. Before: specialists
+interview experts, someone writes a specification, and developers implement
+it, over weeks or months. With LLMs: a draft in a fraction of that time, then a
+review by the people who own the knowledge. The lower half of the diagram above
+shows the same comparison with the numbers of this part.
+
+**The 80% took almost no time.** Each run took 21 to 42 minutes and cost USD 5
+to 10, with no person involved. The result was a working application, a
+knowledge model with its sources, a generator and the tests:
 
 | Part | Run 1 | Run 2 | Run 3 |
 | --- | --- | --- | --- |
@@ -301,14 +314,28 @@ knowledge, and the generator, which is reviewed once and then reused.
 | Tests | 427 | 482 | 397 |
 | Time and cost of the run | 21 min, USD 5.46 | 42 min, USD 9.29 | 25 min, USD 7.02 |
 
-The cost of the last 20% is not measured here. That is the open question for
-the next part.
+**The 20% takes longer.** Someone has to check 12 to 16 rules against
+their articles, decide on 11 to 14 interpretations and 6 to 8 open points,
+choose where the runs differ, write the acceptance cases, and review the
+generator before it is frozen. Even when this is streamlined, it takes a couple
+of iterations: some hours of meetings with the people who run the process, or
+of focused work. That is about four times the time the agent took, which is the
+split part 2 predicted: about 20% of the time for the draft, about 80% for the
+review.
+
+**The whole is still much less.** The review is the larger part of the new
+effort, but the new effort is hours, where specifying and implementing the same
+process used to take weeks. That was the claim of part 2: even with review,
+the total effort is a fraction of what it used to be. The review effort here is
+an estimate, not a measurement. The next part goes through the review and
+measures it.
 
 ## Limits
 
 - One reference, of about 40 articles, well structured.
 - The FamZG is public, so the agent may have seen it in training.
 - One tested case. Nobody who runs the process has read the models.
+- The effort of the review is an estimate; the next part measures it.
 - "Suitable" is a judgement on a sample, not a proof: a decision that looks
   reasonable can still be wrong in law.
 
