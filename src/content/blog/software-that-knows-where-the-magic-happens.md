@@ -6,6 +6,7 @@ tags: ['software-that-knows', 'llm', 'coding-agents', 'ontology']
 series: 'software-that-knows'
 image: '/images/software-that-knows/first-process-below-minimum.png'
 medium: 'https://almilo.medium.com/software-that-knows-where-the-magic-happens-b8e09c0083ba'
+linkedin: 'https://www.linkedin.com/posts/alberto-mijares-1138017_softwarearchitecture-knowledgemanagement-share-7519334133987262464-5i7j/'
 draft: false
 ---
 
