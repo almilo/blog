@@ -5,6 +5,7 @@ pubDate: 2026-10-23
 tags: ['software-that-knows', 'llm', 'coding-agents', 'ontology']
 series: 'software-that-knows'
 image: '/images/software-that-knows/first-process-below-minimum.png'
+medium: 'https://almilo.medium.com/software-that-knows-where-the-magic-happens-b8e09c0083ba'
 draft: false
 ---
 
